@@ -7,10 +7,10 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -18,6 +18,8 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 public class Core {
+	
+	static final String kmlistDir = "res/kanmusuList.xml";
 	
 	enum UpdateState {unknown, ood, utd}
 	
@@ -27,80 +29,125 @@ public class Core {
 	public static UpdateState update = UpdateState.unknown;
 	public static String newVersion = "?";
 	
+	static DocumentBuilder db;
+	static Document kmlistFile;
+	static Node root;
+	static NodeList kms;
+	
 	public static ArrayList<Kanmusu> kmlist = new ArrayList<>();
 	
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
+		db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+		kmlistFile = db.parse(kmlistDir);
+		root = kmlistFile.getDocumentElement();
+		kms = root.getChildNodes();
+		
 		initLevels();
 		initKMlist();
+		//initKCDBdata();
 		Ui.init();
 	}
 
+//	private static void initKCDBdata() {
+//		try {
+//			
+//		} catch (Exeption e) {
+//			JOptionPane.showMessageDialog(null, e.getMessage(), "ERROR IN COMMUNICATING WITH KCDB", JOptionPane.ERROR_MESSAGE);
+//		}
+//	}
+
 	private static void initKMlist() throws ParserConfigurationException, SAXException, IOException {
-		DocumentBuilder db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-		Document kmlistFile = db.parse("res/kanmusuList.xml");
-		Node root = kmlistFile.getDocumentElement();
-		NodeList kms = root.getChildNodes();
 		for (int i = 0; i<kms.getLength(); i++) {
-			Node km = kms.item(i);
-			if (km.getNodeName() == "ship") {
-				Element kmE = (Element) km;
-				Kanmusu kanmusu = new Kanmusu(kmE.getAttribute("type"));
-				NodeList kmps = km.getChildNodes();
-				for (int j = 0; j < kmps.getLength(); j++) {
-					if (kmps.item(j).getNodeType() == Node.ELEMENT_NODE) {
-						Element kmp = (Element) kmps.item(j);
-						switch (kmp.getNodeName()) {
-						case "id":
-							kanmusu.id = Integer.valueOf(kmp.getTextContent());
-							break;
-						case "name":
-							kanmusu.name = kmp.getTextContent();
-							break;
-						case "nameJP":
+			Kanmusu kmsu = getKanmusuFromFile(i);
+			if (kmsu != null)
+				kmlist.add(kmsu);
+		}
+	}
+	
+	public static Kanmusu getKanmusu(String name) {
+		// Хуйня какая-то, не робит
+		for (int i = 0; i<kmlist.size(); i++) {
+			if (kmlist.get(i).name == name)
+				return kmlist.get(i);
+		}
+		return null;
+	}
+	
+	public static Kanmusu getKanmusu(int id) {
+		for (int i = 0; i<kmlist.size(); i++) {
+			if (kmlist.get(i).id == id)
+				return kmlist.get(i);
+		}
+		return null;
+	}
+
+	private static Kanmusu getKanmusuFromFile(int i) throws ParserConfigurationException, SAXException, IOException {
+		Node km = kms.item(i);
+		if (km.getNodeName() == "ship") {
+			Element kmE = (Element) km;
+			Kanmusu kanmusu = new Kanmusu(kmE.getAttribute("type"));
+			NodeList kmps = km.getChildNodes();
+			for (int j = 0; j < kmps.getLength(); j++) {
+				if (kmps.item(j).getNodeType() == Node.ELEMENT_NODE) {
+					Element kmp = (Element) kmps.item(j);
+					switch (kmp.getNodeName()) {
+					case "id":
+						kanmusu.id = Integer.valueOf(kmp.getTextContent());
+						break;
+					case "name":
+						kanmusu.name = kmp.getTextContent();
+						break;
+					case "nameJP":
+						if (kmp.hasAttribute("original")) {
+							kanmusu.oname = kmp.getAttribute("original");
 							kanmusu.jpname = kmp.getTextContent();
-							break;
-						case "craft":
-							kanmusu.setCraft(kmp.getTextContent());
-							break;
-						case "stats":
-							for (int k = 0; k<kmp.getChildNodes().getLength(); i++) {
-								if (kmp.getChildNodes().item(k).getNodeType() == Node.ELEMENT_NODE) {
-									Element kmpst = (Element) kmp.getChildNodes().item(k);
-									switch (kmpst.getNodeName()) {
-									case "fuel":
-										kanmusu.fuel = Integer.valueOf(kmpst.getTextContent());
-										break;
-									case "ammo":
-										kanmusu.ammo = Integer.valueOf(kmpst.getTextContent());
-										break;
-									case "slots":
-										kanmusu.slots = new int[Integer.valueOf(kmpst.getAttribute("count"))];
-										for (int l = 0; l < kmpst.getChildNodes().getLength(); l++) {
-											if (kmpst.getChildNodes().item(l).getNodeType() == Node.ELEMENT_NODE) {
-												Element kmsl = (Element) kmpst.getChildNodes().item(l);
-												if (kmsl.getNodeName() == "slot")
-													kanmusu.slots[Integer.valueOf(kmsl.getAttribute("id"))] = Integer.valueOf(kmsl.getTextContent());
-											}
+						} else {
+							kanmusu.jpname = kmp.getTextContent();
+							kanmusu.oname = kanmusu.jpname;
+						}
+						break;
+					case "craft":
+						kanmusu.setCraft(kmp.getTextContent());
+						break;
+					case "stats":
+						for (int k = 0; k<kmp.getChildNodes().getLength(); k++) {
+							if (kmp.getChildNodes().item(k).getNodeType() == Node.ELEMENT_NODE) {
+								Element kmpst = (Element) kmp.getChildNodes().item(k);
+								switch (kmpst.getNodeName()) {
+								case "fuel":
+									kanmusu.fuel = Integer.valueOf(kmpst.getTextContent());
+									break;
+								case "ammo":
+									kanmusu.ammo = Integer.valueOf(kmpst.getTextContent());
+									break;
+								case "slots":
+									kanmusu.slots = new int[Integer.valueOf(kmpst.getAttribute("count"))];
+									for (int l = 0; l < kmpst.getChildNodes().getLength(); l++) {
+										if (kmpst.getChildNodes().item(l).getNodeType() == Node.ELEMENT_NODE) {
+											Element kmsl = (Element) kmpst.getChildNodes().item(l);
+											if (kmsl.getNodeName() == "slot")
+												kanmusu.slots[Integer.valueOf(kmsl.getAttribute("id"))] = Integer.valueOf(kmsl.getTextContent());
 										}
-										break;
-									default:
-										break;
 									}
+									break;
+								default:
+									break;
 								}
 							}
-							break;
-						case "remodel":
-							//TODO
-							break;
-						default:
-							break;
 						}
+						break;
+					case "remodel":
+						// TODO
+						break;
+					default:
+						break;
 					}
 				}
-				kmlist.add(kanmusu);
-				
 			}
+			return kanmusu;
+			
 		}
+		return null;
 	}
 
 	private static void initLevels() {

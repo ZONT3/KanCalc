@@ -5,6 +5,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.io.IOException;
+
 import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -12,6 +14,9 @@ import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.xml.sax.SAXException;
 
 public class Ui {
 	
@@ -90,6 +95,7 @@ public class Ui {
 		tp_cc_price.setEditable(false);
 		bt_cc_go.addActionListener(listener);
 		mb_ship.addActionListener(listener);
+		mb_ship.setSelectedItem(Core.getKanmusu(34));
 		Box cb1 = Box.createHorizontalBox();
 		cb1.add(Box.createHorizontalStrut(300));
 		cb1.add(mb_ship);
@@ -181,7 +187,7 @@ public class Ui {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			Kanmusu kanmusu = Kanmusu.yuudachi;
+			Kanmusu kanmusu = Core.getKanmusu(34);
 			
 			if (e.getSource() == bt_go) {
 				try {

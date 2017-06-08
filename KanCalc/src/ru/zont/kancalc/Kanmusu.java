@@ -5,6 +5,7 @@ public class Kanmusu {
 	String type;
 	String name;
 	String jpname;
+	String oname;
 	String craft;
 	double craftchance;
 	Drop drop;
@@ -37,6 +38,4 @@ public class Kanmusu {
 	public void setDrop(String[] maps) {
 		drop.map = maps;
 	}
-	
-	
 }
