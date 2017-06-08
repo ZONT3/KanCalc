@@ -18,7 +18,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="2">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 			</slots>
@@ -55,7 +55,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="3">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 				<slot id="2">0</slot>
@@ -79,7 +79,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="3">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 				<slot id="2">0</slot>
@@ -108,7 +108,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="2">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 			</slots>
@@ -147,7 +147,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="3">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 				<slot id="2">0</slot>
@@ -171,7 +171,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="3">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 				<slot id="2">0</slot>
@@ -200,7 +200,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="2">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 			</slots>
@@ -231,7 +231,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="3">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 				<slot id="2">0</slot>
@@ -260,7 +260,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="2">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 			</slots>
@@ -293,7 +293,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="3">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 				<slot id="2">0</slot>
@@ -322,7 +322,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="2">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 			</slots>
@@ -357,7 +357,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="3">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 				<slot id="2">0</slot>
@@ -381,7 +381,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="3">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 				<slot id="2">0</slot>
@@ -410,7 +410,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="2">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 			</slots>
@@ -446,7 +446,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="3">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 				<slot id="2">0</slot>
@@ -475,7 +475,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="2">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 			</slots>
@@ -515,7 +515,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="3">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 				<slot id="2">0</slot>
@@ -544,7 +544,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="2">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 			</slots>
@@ -585,7 +585,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="3">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 				<slot id="2">0</slot>
@@ -614,7 +614,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="2">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 			</slots>
@@ -656,7 +656,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="3">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 				<slot id="2">0</slot>
@@ -685,7 +685,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="2">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 			</slots>
@@ -715,7 +715,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="3">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 				<slot id="2">0</slot>
@@ -744,7 +744,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="2">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 			</slots>
@@ -773,7 +773,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="3">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 				<slot id="2">0</slot>
@@ -797,7 +797,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="3">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 				<slot id="2">0</slot>
@@ -826,7 +826,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="2">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 			</slots>
@@ -866,7 +866,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="3">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 				<slot id="2">0</slot>
@@ -895,7 +895,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="2">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 			</slots>
@@ -936,7 +936,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="3">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 				<slot id="2">0</slot>
@@ -965,7 +965,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="2">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 			</slots>
@@ -1005,7 +1005,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="3">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 				<slot id="2">0</slot>
@@ -1034,7 +1034,7 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="2">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 			</slots>
@@ -1068,13 +1068,906 @@
 			<luk></luk><lukM></lukM>
 			<rng></rng>
 			<speed></speed>
-			<slots>
+			<slots count="3">
 				<slot id="0">0</slot>
 				<slot id="1">0</slot>
 				<slot id="2">0</slot>
 			</slots>
 			<fuel>15</fuel>
 			<ammo>20</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="CL">
+		<id>21</id>
+		<nid>42</nid>
+		<name>Nagara</name>
+		<nameJP>長良</nameJP>
+		<craft>250/130/200/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="2">
+				<slot id="0">1</slot>
+				<slot id="1">1</slot>
+			</slots>
+			<fuel>25</fuel>
+			<ammo>25</ammo>
+		</stats>
+		<drops>
+		<map>1-1</map>
+		<map>1-2</map>
+		<map>1-3</map>
+		<map>1-4</map>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>2-3</map>
+		<map>2-5</map>
+		<map>3-2</map>
+		<map>4-3</map>
+		<map>4-4</map>
+		<map>4-5</map>
+		<map>5-2</map>
+		<map>5-3</map>
+		<map>5-4</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>218</id>
+			<nid>1318</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">1</slot>
+				<slot id="1">1</slot>
+				<slot id="2">1</slot>
+			</slots>
+			<fuel>25</fuel>
+			<ammo>30</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="CL">
+		<id>22</id>
+		<nid>43</nid>
+		<name>Isuzu</name>
+		<nameJP>五十鈴</nameJP>
+		<craft>250/130/200/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="2">
+				<slot id="0">1</slot>
+				<slot id="1">1</slot>
+			</slots>
+			<fuel>25</fuel>
+			<ammo>25</ammo>
+		</stats>
+		<drops>
+		<map>1-2</map>
+		<map>1-3</map>
+		<map>1-4</map>
+		<map>1-5</map>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>2-3</map>
+		<map>2-4</map>
+		<map>2-5</map>
+		<map>3-1</map>
+		<map>3-2</map>
+		<map>3-3</map>
+		<map>3-4</map>
+		<map>4-1</map>
+		<map>4-2</map>
+		<map>4-3</map>
+		<map>4-4</map>
+		<map>4-5</map>
+		<map>5-1</map>
+		<map>5-2</map>
+		<map>5-3</map>
+		</drops>
+		<remodel index="1" lvl="12">
+			<id>219</id>
+			<nid>1319</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">1</slot>
+				<slot id="1">1</slot>
+				<slot id="2">1</slot>
+			</slots>
+			<fuel>25</fuel>
+			<ammo>30</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+		<remodel index="1" lvl="50">
+			<id>141</id>
+			<nid>141</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>25</fuel>
+			<ammo>30</ammo>
+			<suffix>Kai Ni</suffix>
+			<suffixJP>改二</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="CL">
+		<id>23</id>
+		<nid>45</nid>
+		<name>Yura</name>
+		<nameJP>由良</nameJP>
+		<craft>250/130/200/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="2">
+				<slot id="0">1</slot>
+				<slot id="1">1</slot>
+			</slots>
+			<fuel>25</fuel>
+			<ammo>25</ammo>
+		</stats>
+		<drops>
+		<map>1-2</map>
+		<map>1-3</map>
+		<map>1-4</map>
+		<map>1-5</map>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>2-3</map>
+		<map>2-4</map>
+		<map>2-5</map>
+		<map>3-1</map>
+		<map>3-2</map>
+		<map>3-3</map>
+		<map>3-4</map>
+		<map>4-1</map>
+		<map>4-2</map>
+		<map>4-3</map>
+		<map>4-4</map>
+		<map>4-5</map>
+		<map>5-1</map>
+		<map>5-2</map>
+		<map>5-3</map>
+		<map>5-4</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>220</id>
+			<nid>1320</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">1</slot>
+				<slot id="1">1</slot>
+				<slot id="2">1</slot>
+			</slots>
+			<fuel>25</fuel>
+			<ammo>30</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="CL">
+		<id>24</id>
+		<nid>19</nid>
+		<name>Ooi</name>
+		<nameJP>大井</nameJP>
+		<craft>250/130/200/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="2">
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>25</fuel>
+			<ammo>25</ammo>
+		</stats>
+		<drops>
+		<map>2-2</map>
+		<map>2-3</map>
+		<map>2-4</map>
+		<map>2-5</map>
+		<map>3-1</map>
+		<map>3-3</map>
+		<map>3-4</map>
+		<map>4-1</map>
+		<map>4-2</map>
+		<map>4-3</map>
+		<map>4-4</map>
+		<map>5-1</map>
+		<map>5-2</map>
+		<map>5-3</map>
+		</drops>
+		<remodel index="1" lvl="10">
+			<id>57</id>
+			<nid>97</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="2">
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>25</fuel>
+			<ammo>50</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+		<remodel index="1" lvl="50">
+			<id>118</id>
+			<nid>114</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>25</fuel>
+			<ammo>75</ammo>
+			<suffix>Kai Ni</suffix>
+			<suffixJP>改二</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="CL">
+		<id>25</id>
+		<nid>20</nid>
+		<name>Kitakami</name>
+		<nameJP>北上</nameJP>
+		<craft>250/130/200/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="2">
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>25</fuel>
+			<ammo>25</ammo>
+		</stats>
+		<drops>
+		<map>1-1</map>
+		<map>1-2</map>
+		<map>1-3</map>
+		<map>1-5</map>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>2-3</map>
+		<map>2-4</map>
+		<map>2-5</map>
+		<map>3-1</map>
+		<map>3-2</map>
+		<map>3-3</map>
+		<map>3-4</map>
+		<map>4-1</map>
+		<map>4-2</map>
+		<map>4-3</map>
+		<map>4-4</map>
+		<map>5-1</map>
+		<map>5-2</map>
+		<map>5-3</map>
+		</drops>
+		<remodel index="1" lvl="10">
+			<id>58</id>
+			<nid>98</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="2">
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>25</fuel>
+			<ammo>50</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+		<remodel index="1" lvl="50">
+			<id>119</id>
+			<nid>115</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>25</fuel>
+			<ammo>75</ammo>
+			<suffix>Kai Ni</suffix>
+			<suffixJP>改二</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="BB">
+		<id>26</id>
+		<nid>26</nid>
+		<name>Fusou</name>
+		<nameJP>扶桑</nameJP>
+		<craft>400/100/600/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="4">
+				<slot id="0">3</slot>
+				<slot id="1">3</slot>
+				<slot id="2">3</slot>
+				<slot id="3">3</slot>
+			</slots>
+			<fuel>85</fuel>
+			<ammo>120</ammo>
+		</stats>
+		<drops>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>2-3</map>
+		<map>2-4</map>
+		<map>2-5</map>
+		<map>3-1</map>
+		<map>3-2</map>
+		<map>3-3</map>
+		<map>3-4</map>
+		<map>3-5</map>
+		<map>4-1</map>
+		<map>4-2</map>
+		<map>4-3</map>
+		<map>4-4</map>
+		<map>4-5</map>
+		<map>5-1</map>
+		<map>5-2</map>
+		<map>5-3</map>
+		<map>6-1</map>
+		<map>6-2</map>
+		<map>6-4</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>286</id>
+			<nid>1386</nid>
+			<newtype>BBV</newtype>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="4">
+				<slot id="0">10</slot>
+				<slot id="1">10</slot>
+				<slot id="2">10</slot>
+				<slot id="3">10</slot>
+			</slots>
+			<fuel>95</fuel>
+			<ammo>105</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+		<remodel index="1" lvl="80">
+			<id>411</id>
+			<nid>211</nid>
+			<newtype>BBV</newtype>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="4">
+				<slot id="0">4</slot>
+				<slot id="1">4</slot>
+				<slot id="2">9</slot>
+				<slot id="3">23</slot>
+			</slots>
+			<fuel>105</fuel>
+			<ammo>140</ammo>
+			<suffix>Kai Ni</suffix>
+			<suffixJP>改二</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="BB">
+		<id>27</id>
+		<nid>27</nid>
+		<name>Yamashiro</name>
+		<nameJP>山城</nameJP>
+		<craft>400/100/600/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="4">
+				<slot id="0">3</slot>
+				<slot id="1">3</slot>
+				<slot id="2">3</slot>
+				<slot id="3">3</slot>
+			</slots>
+			<fuel>85</fuel>
+			<ammo>120</ammo>
+		</stats>
+		<drops>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>2-3</map>
+		<map>2-4</map>
+		<map>2-5</map>
+		<map>3-1</map>
+		<map>3-2</map>
+		<map>3-3</map>
+		<map>3-4</map>
+		<map>4-1</map>
+		<map>4-2</map>
+		<map>4-3</map>
+		<map>4-4</map>
+		<map>4-5</map>
+		<map>5-1</map>
+		<map>5-2</map>
+		<map>5-3</map>
+		<map>6-2</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>287</id>
+			<nid>1387</nid>
+			<newtype>BBV</newtype>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="4">
+				<slot id="0">10</slot>
+				<slot id="1">10</slot>
+				<slot id="2">10</slot>
+				<slot id="3">10</slot>
+			</slots>
+			<fuel>95</fuel>
+			<ammo>105</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+		<remodel index="1" lvl="80">
+			<id>412</id>
+			<nid>212</nid>
+			<newtype>BBV</newtype>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="4">
+				<slot id="0">4</slot>
+				<slot id="1">4</slot>
+				<slot id="2">9</slot>
+				<slot id="3">23</slot>
+			</slots>
+			<fuel>105</fuel>
+			<ammo>140</ammo>
+			<suffix>Kai Ni</suffix>
+			<suffixJP>改二</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="DD">
+		<id>28</id>
+		<nid>33</nid>
+		<name>Satsuki</name>
+		<nameJP>皐月</nameJP>
+		<craft>30/30/30/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="2">
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>15</ammo>
+		</stats>
+		<drops>
+		<map>1-1</map>
+		<map>1-3</map>
+		<map>1-4</map>
+		<map>1-5</map>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>2-3</map>
+		<map>2-5</map>
+		<map>5-1</map>
+		<map>5-4</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>256</id>
+			<nid>1356</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>15</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+		<remodel index="1" lvl="75">
+			<id>418</id>
+			<nid>218</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>15</ammo>
+			<suffix>Kai Ni</suffix>
+			<suffixJP>改二</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="DD">
+		<id>29</id>
+		<nid>34</nid>
+		<name>Fumizuki</name>
+		<nameJP>文月</nameJP>
+		<craft>30/30/30/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="2">
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>15</ammo>
+		</stats>
+		<drops>
+		<map>1-1</map>
+		<map>1-3</map>
+		<map>1-4</map>
+		<map>1-5</map>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>2-3</map>
+		<map>2-5</map>
+		<map>5-1</map>
+		<map>5-4</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>257</id>
+			<nid>1357</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>15</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="DD">
+		<id>30</id>
+		<nid>36</nid>
+		<name>Kikuzuki</name>
+		<nameJP>菊月</nameJP>
+		<craft>30/30/30/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="2">
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>15</ammo>
+		</stats>
+		<drops>
+		<map>1-1</map>
+		<map>1-2</map>
+		<map>1-3</map>
+		<map>1-4</map>
+		<map>1-5</map>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>5-1</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>259</id>
+			<nid>1359</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>15</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="DD">
+		<id>31</id>
+		<nid>38</nid>
+		<name>Mochizuki</name>
+		<nameJP>望月</nameJP>
+		<craft>30/30/30/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="2">
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>15</ammo>
+		</stats>
+		<drops>
+		<map>1-1</map>
+		<map>1-2</map>
+		<map>1-3</map>
+		<map>1-4</map>
+		<map>1-5</map>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>5-1</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>259</id>
+			<nid>1359</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>15</ammo>
 			<suffix>Kai</suffix>
 			<suffixJP>改</suffixJP>
 		</remodel>
