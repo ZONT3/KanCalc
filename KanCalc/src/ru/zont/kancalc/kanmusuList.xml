@@ -1,59 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ships>
 	<ship type="DD">
-		<id></id>
-		<nid></nid>
-		<name></name>
-		<nameJP></nameJP>
-		<craft>30/30/30/30</craft>
-		<stats>
-			<hp></hp><hpM></hpM>
-			<fp></fp><fpB></fpB>
-			<tp></tp><tpB></tpB>
-			<aa></aa><aaB></aaB>
-			<ar></ar><arB></arB>
-			<eva></eva><evaB></evaB>
-			<asw></asw><aswB></aswB>
-			<los></los><losB></losB>
-			<luk></luk><lukM></lukM>
-			<rng></rng>
-			<speed></speed>
-			<slots>
-				<slot id="0"></slot>
-				<slot id="1"></slot>
-			</slots>
-			<fuel></fuel>
-			<ammo></ammo>
-		</stats>
-		<drops>
-		<map></map>
-		</drops>
-		<remodel index="1" lvl="20">
-			<id></id>
-			<nid></nid>
-			<hp></hp><hpM></hpM>
-			<fp></fp><fpB></fpB>
-			<tp></tp><tpB></tpB>
-			<aa></aa><aaB></aaB>
-			<ar></ar><arB></arB>
-			<eva></eva><evaB></evaB>
-			<asw></asw><aswB></aswB>
-			<los></los><losB></losB>
-			<luk></luk><lukM></lukM>
-			<rng></rng>
-			<speed></speed>
-			<slots>
-				<slot id="0">0</slot>
-				<slot id="1">0</slot>
-				<slot id="2">0</slot>
-			</slots>
-			<fuel></fuel>
-			<ammo></ammo>
-			<suffix>Kai</suffix>
-			<suffixJP>改</suffixJP>
-		</remodel>
-	</ship>
-	<ship type="DD">
 		<id>1</id>
 		<nid>31</nid>
 		<name>Mutsuki</name>
