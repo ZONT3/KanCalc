@@ -10,7 +10,11 @@ public class Kanmusu {
 	Drop drop;
 	int nextlevel;
 	int index;
-	int 
+	int nid;
+	int[] ids;
+	int fuel;
+	int ammo;
+	int[] slots;
 	
 	Kanmusu(String type) {
 		this.type = type;
