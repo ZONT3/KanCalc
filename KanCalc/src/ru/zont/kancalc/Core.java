@@ -37,7 +37,7 @@ public class Core {
 
 	private static void initKMlist() throws ParserConfigurationException, SAXException, IOException {
 		DocumentBuilder db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-		Document kmlistFile = db.parse("kanmusuList.xml");
+		Document kmlistFile = db.parse("res/kanmusuList.xml");
 		Node root = kmlistFile.getDocumentElement();
 		NodeList kms = root.getChildNodes();
 		for (int i = 0; i<kms.getLength(); i++) {
