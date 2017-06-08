@@ -1,0 +1,1135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ships>
+	<ship type="DD">
+		<id></id>
+		<nid></nid>
+		<name></name>
+		<nameJP></nameJP>
+		<craft>30/30/30/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0"></slot>
+				<slot id="1"></slot>
+			</slots>
+			<fuel></fuel>
+			<ammo></ammo>
+		</stats>
+		<drops>
+		<map></map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id></id>
+			<nid></nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel></fuel>
+			<ammo></ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="DD">
+		<id>1</id>
+		<nid>31</nid>
+		<name>Mutsuki</name>
+		<nameJP>睦月</nameJP>
+		<craft>30/30/30/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>15</ammo>
+		</stats>
+		<drops>
+		<map>1-1</map>
+		<map>1-2</map>
+		<map>1-3</map>
+		<map>1-4</map>
+		<map>2-1</map>
+		<map>2-3</map>
+		<map>2-5</map>
+		<map>4-2</map>
+		<map>4-4</map>
+		<map>5-1</map>
+		<map>5-3</map>
+		<map>5-4</map>
+		<map>6-1</map>
+		<map>6-3</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>254</id>
+			<nid>1354</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>15</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+		<remodel index="2" lvl="65">
+			<id>434</id>
+			<nid>234</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>15</ammo>
+			<suffix>Kai Ni</suffix>
+			<suffixJP>改二</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="DD">
+		<id>2</id>
+		<nid>32</nid>
+		<name>Kisaragi</name>
+		<nameJP>如月</nameJP>
+		<craft>30/30/30/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>15</ammo>
+		</stats>
+		<drops>
+		<map>1-1</map>
+		<map>1-2</map>
+		<map>1-3</map>
+		<map>1-4</map>
+		<map>1-5</map>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>2-3</map>
+		<map>2-4</map>
+		<map>2-5</map>
+		<map>4-2</map>
+		<map>4-4</map>
+		<map>5-1</map>
+		<map>5-3</map>
+		<map>6-1</map>
+		<map>6-3</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>255</id>
+			<nid>1355</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>15</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+		<remodel index="2" lvl="65">
+			<id>435</id>
+			<nid>235</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>15</ammo>
+			<suffix>Kai Ni</suffix>
+			<suffixJP>改二</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="DD">
+		<id>6</id>
+		<nid>35</nid>
+		<name>Nagatsuki</name>
+		<nameJP>長月</nameJP>
+		<craft>30/30/30/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>15</ammo>
+		</stats>
+		<drops>
+		<map>1-1</map>
+		<map>1-2</map>
+		<map>1-3</map>
+		<map>1-4</map>
+		<map>1-5</map>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>5-1</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>258</id>
+			<nid>1358</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>15</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="DD">
+		<id>7</id>
+		<nid>37</nid>
+		<name>Mikazuki</name>
+		<nameJP>三日月</nameJP>
+		<craft>30/30/30/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>15</ammo>
+		</stats>
+		<drops>
+		<map>1-1</map>
+		<map>1-2</map>
+		<map>1-3</map>
+		<map>1-4</map>
+		<map>1-5</map>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>5-1</map>
+		<map>5-4</map>
+		<map>5-5</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>260</id>
+			<nid>1360</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>15</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="DD">
+		<id>9</id>
+		<nid>11</nid>
+		<name>Fubuki</name>
+		<nameJP>吹雪</nameJP>
+		<craft>30/30/30/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+		</stats>
+		<drops>
+		<map>1-1</map>
+		<map>1-3</map>
+		<map>1-4</map>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>2-4</map>
+		<map>3-1</map>
+		<map>4-1</map>
+		<map>4-2</map>
+		<map>4-5</map>
+		<map>5-3</map>
+		<map>5-4</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>201</id>
+			<nid>1301</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+		<remodel index="2" lvl="70">
+			<id>426</id>
+			<nid>226</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+			<suffix>Kai Ni</suffix>
+			<suffixJP>改二</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="DD">
+		<id>10</id>
+		<nid>12</nid>
+		<name>Shirayuki</name>
+		<nameJP>白雪</nameJP>
+		<craft>30/30/30/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+		</stats>
+		<drops>
+		<map>1-1</map>
+		<map>1-2</map>
+		<map>1-3</map>
+		<map>1-4</map>
+		<map>1-5</map>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>2-3</map>
+		<map>2-4</map>
+		<map>2-5</map>
+		<map>4-1</map>
+		<map>4-2</map>
+		<map>4-5</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>202</id>
+			<nid>1302</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="DD">
+		<id>11</id>
+		<nid>14</nid>
+		<name>Shirayuki</name>
+		<nameJP>白雪</nameJP>
+		<craft>30/30/30/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+		</stats>
+		<drops>
+		<map>1-1</map>
+		<map>1-2</map>
+		<map>1-3</map>
+		<map>1-4</map>
+		<map>1-5</map>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>2-3</map>
+		<map>2-4</map>
+		<map>2-5</map>
+		<map>3-1</map>
+		<map>3-2</map>
+		<map>3-3</map>
+		<map>3-4</map>
+		<map>4-2</map>
+		<map>4-4</map>
+		<map>4-5</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>204</id>
+			<nid>1304</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="DD">
+		<id>12</id>
+		<nid>16</nid>
+		<name>Isonami</name>
+		<nameJP>白雪</nameJP>
+		<craft>30/30/30/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+		</stats>
+		<drops>
+		<map>1-1</map>
+		<map>1-2</map>
+		<map>1-3</map>
+		<map>1-4</map>
+		<map>1-5</map>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>2-3</map>
+		<map>2-4</map>
+		<map>2-5</map>
+		<map>3-1</map>
+		<map>3-2</map>
+		<map>3-3</map>
+		<map>4-1</map>
+		<map>4-2</map>
+		<map>4-3</map>
+		<map>4-4</map>
+		<map>4-5</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>206</id>
+			<nid>1306</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="DD">
+		<id>14</id>
+		<nid>18</nid>
+		<name>Shikinami</name>
+		<nameJP>敷波</nameJP>
+		<craft>30/30/30/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+		</stats>
+		<drops>
+		<map>1-1</map>
+		<map>1-2</map>
+		<map>1-3</map>
+		<map>1-4</map>
+		<map>1-5</map>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>2-3</map>
+		<map>2-4</map>
+		<map>2-5</map>
+		<map>3-1</map>
+		<map>3-2</map>
+		<map>3-3</map>
+		<map>3-4</map>
+		<map>4-1</map>
+		<map>4-3</map>
+		<map>4-4</map>
+		<map>4-5</map>
+		<map>5-3</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>208</id>
+			<nid>1308</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="DD">
+		<id>15</id>
+		<nid>68</nid>
+		<name>Akebono</name>
+		<nameJP>曙</nameJP>
+		<craft>30/30/30/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+		</stats>
+		<drops>
+		<map>1-1</map>
+		<map>1-2</map>
+		<map>1-3</map>
+		<map>1-5</map>
+		<map>2-5</map>
+		<map>3-1</map>
+		<map>5-3</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>231</id>
+			<nid>1331</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="DD">
+		<id>16</id>
+		<nid>70</nid>
+		<name>Ushio</name>
+		<nameJP>潮</nameJP>
+		<craft>30/30/30/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+		</stats>
+		<drops>
+		<map>1-1</map>
+		<map>1-2</map>
+		<map>1-3</map>
+		<map>1-5</map>
+		<map>2-4</map>
+		<map>2-5</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>233</id>
+			<nid>1333</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+		<remodel index="1" lvl="60">
+			<id>407</id>
+			<nid>207</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+			<suffix>Kai Ni</suffix>
+			<suffixJP>改二</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="DD">
+		<id>17</id>
+		<nid>91</nid>
+		<name>Kagerou</name>
+		<nameJP>陽炎</nameJP>
+		<craft>30/30/30/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+		</stats>
+		<drops>
+		<map>1-1</map>
+		<map>1-2</map>
+		<map>1-4</map>
+		<map>1-5</map>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>2-3</map>
+		<map>2-4</map>
+		<map>3-1</map>
+		<map>3-2</map>
+		<map>3-3</map>
+		<map>4-1</map>
+		<map>4-2</map>
+		<map>4-3</map>
+		<map>4-5</map>
+		<map>5-2</map>
+		<map>5-4</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>225</id>
+			<nid>1325</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="DD">
+		<id>18</id>
+		<nid>92</nid>
+		<name>Shiranui</name>
+		<nameJP>不知火</nameJP>
+		<craft>30/30/30/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+		</stats>
+		<drops>
+		<map>1-1</map>
+		<map>1-2</map>
+		<map>1-3</map>
+		<map>1-4</map>
+		<map>1-5</map>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>2-3</map>
+		<map>2-4</map>
+		<map>3-1</map>
+		<map>3-2</map>
+		<map>3-3</map>
+		<map>4-1</map>
+		<map>4-2</map>
+		<map>4-3</map>
+		<map>4-4</map>
+		<map>4-5</map>
+		<map>5-2</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>226</id>
+			<nid>1326</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="DD">
+		<id>19</id>
+		<nid>93</nid>
+		<name>Kuroshio</name>
+		<nameJP>黒潮</nameJP>
+		<craft>30/30/30/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+		</stats>
+		<drops>
+		<map>1-1</map>
+		<map>1-2</map>
+		<map>1-3</map>
+		<map>1-4</map>
+		<map>1-5</map>
+		<map>2-1</map>
+		<map>2-2</map>
+		<map>2-3</map>
+		<map>2-4</map>
+		<map>3-1</map>
+		<map>3-2</map>
+		<map>3-3</map>
+		<map>4-1</map>
+		<map>4-2</map>
+		<map>4-3</map>
+		<map>4-4</map>
+		<map>5-2</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>227</id>
+			<nid>1327</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="DD">
+		<id>20</id>
+		<nid>5</nid>
+		<name>Yukikaze</name>
+		<nameJP>雪風</nameJP>
+		<craft>30/30/30/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+		</stats>
+		<drops>
+		<map>1-4</map>
+		<map>2-4</map>
+		<map>3-1</map>
+		<map>3-2</map>
+		<map>3-3</map>
+		<map>3-4</map>
+		<map>4-1</map>
+		<map>4-2</map>
+		<map>4-4</map>
+		<map>5-2</map>
+		<map>5-4</map>
+		</drops>
+		<remodel index="1" lvl="20">
+			<id>228</id>
+			<nid>1328</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots>
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+</ships>
