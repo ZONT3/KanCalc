@@ -16,7 +16,7 @@ import org.xml.sax.SAXException;
 
 public class Core {
 	
-	static final String kmlistDir = "res/kanmusuList.xml";
+	static final String kmlistDir = "/kanmusuList.xml";
 	
 	enum UpdateState {unknown, ood, utd}
 	
@@ -38,7 +38,7 @@ public class Core {
 		for (int i = 0; i < args.length; i++) {
 			System.out.println(args[i]);
 			switch (args[i]) {
-			case "cc":
+			case "-cc":
 				craftscheck = true;
 				break;
 
@@ -48,7 +48,7 @@ public class Core {
 		}
 		
 		db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-		kmlistFile = db.parse(kmlistDir);
+		kmlistFile = db.parse(Core.class.getResourceAsStream(kmlistDir));
 		root = kmlistFile.getDocumentElement();
 		kms = root.getChildNodes();
 		
@@ -98,7 +98,7 @@ public class Core {
 			for (int j = 0; j < kmps.getLength(); j++) {
 				if (kmps.item(j).getNodeType() == Node.ELEMENT_NODE) {
 					Element kmp = (Element) kmps.item(j);
-					System.out.println(kmp.getNodeName()+"="+kmp.getTextContent());
+					//System.out.println(kmp.getNodeName()+"="+kmp.getTextContent());
 					switch (kmp.getNodeName()) {
 					case "id":
 						kanmusu.id = Integer.valueOf(kmp.getTextContent());
