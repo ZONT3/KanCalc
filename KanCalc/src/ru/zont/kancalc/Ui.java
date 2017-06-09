@@ -5,8 +5,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
-import java.io.IOException;
-
 import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -14,9 +12,6 @@ import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
-import javax.xml.parsers.ParserConfigurationException;
-
-import org.xml.sax.SAXException;
 
 public class Ui {
 	
@@ -36,6 +31,7 @@ public class Ui {
 	static JTextPane tp_result = new JTextPane();
 	
 	static JFrame frame_cc = new JFrame("Chance of craft");
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	static JComboBox mb_ship = new JComboBox(Core.kmlist.toArray());
 	static JTextField tf_cc_tries = new JTextField("Tries");
 	static JTextPane tp_cc_craft = new JTextPane();
@@ -48,6 +44,7 @@ public class Ui {
 	static JButton bt_farm_go = new JButton("GO");
 	static JTextField tf_farm_lvls = new JTextField("1-75");
 	static JTextField tf_farm_basexp = new JTextField("320");
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	static JComboBox mb_farm_rank = new JComboBox(ranks);
 	static JTextField tf_farm_cons_t = new JTextField("20");
 	static JTextField tf_farm_cons_a = new JTextField("30");
@@ -251,15 +248,10 @@ public class Ui {
 	static class weHandler implements WindowListener {
 
 		@Override
-		public void windowActivated(WindowEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
+		public void windowActivated(WindowEvent e) {}
 
 		@Override
-		public void windowClosed(WindowEvent e) {
-			
-		}
+		public void windowClosed(WindowEvent e) {}
 
 		@Override
 		public void windowClosing(WindowEvent e) {
@@ -269,28 +261,19 @@ public class Ui {
 		}
 
 		@Override
-		public void windowDeactivated(WindowEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
+		public void windowDeactivated(WindowEvent e) {}
 
 		@Override
-		public void windowDeiconified(WindowEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
+		public void windowDeiconified(WindowEvent e) {}
 
 		@Override
-		public void windowIconified(WindowEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
+		public void windowIconified(WindowEvent e) {}
 
 		@Override
-		public void windowOpened(WindowEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-		
+		public void windowOpened(WindowEvent e) {}	
+	}
+	
+	public static void err(String message, String title) {
+		JOptionPane.showMessageDialog(null, message, title, JOptionPane.ERROR_MESSAGE);
 	}
 }

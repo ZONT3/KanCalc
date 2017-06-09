@@ -1,20 +1,13 @@
 package ru.zont.kancalc;
 
-import java.io.BufferedReader;
-import java.io.EOFException;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URL;
-import java.net.URLConnection;
 import java.util.ArrayList;
 
-import javax.swing.JOptionPane;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.jsoup.Jsoup;
-import org.jsoup.select.Elements;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -37,10 +30,23 @@ public class Core {
 	static Document kmlistFile;
 	static Node root;
 	static NodeList kms;
+	static boolean craftscheck = false;
 	
 	public static ArrayList<Kanmusu> kmlist = new ArrayList<>();
 	
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
+		for (int i = 0; i < args.length; i++) {
+			System.out.println(args[i]);
+			switch (args[i]) {
+			case "cc":
+				craftscheck = true;
+				break;
+
+			default:
+				break;
+			}
+		}
+		
 		db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 		kmlistFile = db.parse(kmlistDir);
 		root = kmlistFile.getDocumentElement();
@@ -48,7 +54,14 @@ public class Core {
 		
 		initLevels();
 		initKMlist();
+		if (craftscheck)
+			checkCrafts();
 		Ui.init();
+	}
+
+	private static void checkCrafts() {
+		for (int i=0; i<kmlist.size(); i++)
+			kmlist.get(i).getCraftchance();
 	}
 
 	private static void initKMlist() throws ParserConfigurationException, SAXException, IOException {
@@ -61,10 +74,10 @@ public class Core {
 	
 	public static Kanmusu getKanmusu(String name) {
 		// Хуйня какая-то, не робит
-		for (int i = 0; i<kmlist.size(); i++) {
+		// O, заробила, магия
+		for (int i = 0; i<kmlist.size(); i++)
 			if (kmlist.get(i).name.equals(name))
 				return kmlist.get(i);
-		}
 		return null;
 	}
 	
@@ -85,6 +98,7 @@ public class Core {
 			for (int j = 0; j < kmps.getLength(); j++) {
 				if (kmps.item(j).getNodeType() == Node.ELEMENT_NODE) {
 					Element kmp = (Element) kmps.item(j);
+					System.out.println(kmp.getNodeName()+"="+kmp.getTextContent());
 					switch (kmp.getNodeName()) {
 					case "id":
 						kanmusu.id = Integer.valueOf(kmp.getTextContent());
@@ -224,23 +238,33 @@ public class Core {
 		int boux = Integer.parseInt(kanmusu.craft.substring(i+1));
 		return fuel*tries+"/"+ammo*tries+"/"+steel*tries+"/"+boux*tries;
 	}
-	
-	public static String getHTTPData(String pageAddress, String codePage) throws Exception {
-        StringBuilder sb = new StringBuilder();
-        URL pageURL = new URL(pageAddress);
-        URLConnection uc = pageURL.openConnection();
-        BufferedReader br = new BufferedReader(
-                new InputStreamReader(
-                        uc.getInputStream(), codePage));
-        try {
-            String inputLine;
-            while ((inputLine = br.readLine()) != null) {
-                sb.append(inputLine);
-            }         
-        } finally {
-            br.close();
-        }
-        return sb.toString();
-    }
+
+	public static double getCCfromKCDB(Kanmusu kanmusu) {
+		double res = -1;
+		System.out.println("Getting CH for "+kanmusu+" ID:"+kanmusu.id+" C:"+kanmusu.craft);
+		try {
+			org.jsoup.nodes.Document inf = Jsoup.connect("http://kancolle-db.net/ship/"+kanmusu.id+".html").get();
+			org.jsoup.select.Elements tr = inf.getElementsByTag("tr");
+			for (int i=0; i<tr.size(); i++) {
+				if (tr.get(i).getElementsByAttributeValue("class", "ship").size()>0) {
+					if (tr.get(i).getElementsByAttributeValue("class", "ship").get(0).text().equals(kanmusu.craft)) {
+						for (int j=0; j<tr.get(i).childNodeSize(); j++)
+							if (tr.get(i).getElementsContainingText("%").size()>0)
+								res = Double.valueOf(tr.get(i).getElementsContainingText("%").get(1).text().substring
+										(0, tr.get(i).getElementsContainingText("%").get(1).text().length()-1));
+					}
+						
+				}
+				
+			}
+			if (res == -1)
+				Ui.err("Chance of craft hasn't found for native reciepe, defined in kanmusuList.xml ("+
+						kanmusu.craft+ ")\nPlease contact developers to fix it.", "ERROR");
+		} catch (IOException e) {
+			Ui.err(e.getMessage(), "ERROR WITH COMMUNICATING KCDB");
+		}
+		System.out.println(res+"%");
+		return res;
+	}
 	
 }
