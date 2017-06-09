@@ -61,6 +61,7 @@ public class Ui {
 		frame_main.setSize(300, 130);
 		frame_main.setResizable(false);
 		frame_main.setVisible(true);
+		frame_main.setLocationRelativeTo(null);
 		bt_main_smuch.addActionListener(listener);
 		bt_main_cc.addActionListener(listener);
 		bt_main_farm.addActionListener(listener);

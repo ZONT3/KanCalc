@@ -1021,7 +1021,7 @@
 		<nid>5</nid>
 		<name>Yukikaze</name>
 		<nameJP>雪風</nameJP>
-		<craft>30/30/30/30</craft>
+		<craft>250/30/200/30</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -3346,7 +3346,7 @@
 		<nid>10</nid>
 		<name>Shimakaze</name>
 		<nameJP>島風</nameJP>
-		<craft>30/30/30/30</craft>
+		<craft>250/30/200/30</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -3922,7 +3922,7 @@
 		<nid>52</nid>
 		<name>Furutaka</name>
 		<nameJP>古鷹</nameJP>
-		<craft>280/30/230/30</craft>
+		<craft>250/130/200/30</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>

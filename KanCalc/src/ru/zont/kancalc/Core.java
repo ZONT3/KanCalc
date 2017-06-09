@@ -258,7 +258,7 @@ public class Core {
 				
 			}
 			if (res == -1)
-				Ui.err("Chance of craft hasn't found for native reciepe, defined in kanmusuList.xml ("+
+				Ui.err("Chance of craft "+kanmusu+" hasn't found for native reciepe, defined in kanmusuList.xml ("+
 						kanmusu.craft+ ")\nPlease contact developers to fix it.", "ERROR");
 		} catch (IOException e) {
 			Ui.err(e.getMessage(), "ERROR WITH COMMUNICATING KCDB");
