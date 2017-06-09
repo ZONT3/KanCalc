@@ -1,6 +1,7 @@
 package ru.zont.kancalc;
 
 import java.io.BufferedReader;
+import java.io.EOFException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -11,6 +12,9 @@ import javax.swing.JOptionPane;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+
+import org.jsoup.Jsoup;
+import org.jsoup.select.Elements;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -44,17 +48,8 @@ public class Core {
 		
 		initLevels();
 		initKMlist();
-		//initKCDBdata();
 		Ui.init();
 	}
-
-//	private static void initKCDBdata() {
-//		try {
-//			
-//		} catch (Exeption e) {
-//			JOptionPane.showMessageDialog(null, e.getMessage(), "ERROR IN COMMUNICATING WITH KCDB", JOptionPane.ERROR_MESSAGE);
-//		}
-//	}
 
 	private static void initKMlist() throws ParserConfigurationException, SAXException, IOException {
 		for (int i = 0; i<kms.getLength(); i++) {
@@ -67,7 +62,7 @@ public class Core {
 	public static Kanmusu getKanmusu(String name) {
 		// Хуйня какая-то, не робит
 		for (int i = 0; i<kmlist.size(); i++) {
-			if (kmlist.get(i).name == name)
+			if (kmlist.get(i).name.equals(name))
 				return kmlist.get(i);
 		}
 		return null;

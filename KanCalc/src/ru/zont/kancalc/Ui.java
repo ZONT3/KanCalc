@@ -95,7 +95,7 @@ public class Ui {
 		tp_cc_price.setEditable(false);
 		bt_cc_go.addActionListener(listener);
 		mb_ship.addActionListener(listener);
-		mb_ship.setSelectedItem(Core.getKanmusu(34));
+		mb_ship.setSelectedItem(Core.getKanmusu("Yuudachi"));
 		Box cb1 = Box.createHorizontalBox();
 		cb1.add(Box.createHorizontalStrut(300));
 		cb1.add(mb_ship);
@@ -187,7 +187,7 @@ public class Ui {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			Kanmusu kanmusu = Core.getKanmusu(34);
+			Kanmusu kanmusu = Core.getKanmusu("Yuudachi");
 			
 			if (e.getSource() == bt_go) {
 				try {
@@ -231,7 +231,7 @@ public class Ui {
 			} else if (e.getSource() == bt_cc_go) {
 				kanmusu = (Kanmusu) mb_ship.getSelectedItem();
 				if (kanmusu.craft != "unbuildable") {
-					double chance = Core.getSumChance(kanmusu.craftchance, Integer.parseInt(tf_cc_tries.getText()));
+					double chance = Core.getSumChance(kanmusu.getCraftchance(), Integer.parseInt(tf_cc_tries.getText()));
 					chance = (double)Math.rint(1000*chance)/1000;
 					tp_cc_price.setText(Core.getPrice(Integer.parseInt(tf_cc_tries.getText()), kanmusu));
 					tp_cc_chance.setText(chance+"%");
