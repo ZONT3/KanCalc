@@ -294,7 +294,6 @@ public class Ui {
 					bt_main_dc.setEnabled(true);
 					bt_main_cc.setEnabled(true);}
 				tp_newver.setText("Ready.");
-				
 			} else if (e.getSource() == cb_dc_maps) {
 				kanmusu = (Kanmusu) cb_dc_ship.getSelectedItem();
 				String map = (String) cb_dc_maps.getSelectedItem();
@@ -302,7 +301,8 @@ public class Ui {
 				buildList(cb_dc_nodes, kanmusu.getNodes(map));
 			} else if (e.getSource() == bt_dc_go) {
 				kanmusu = (Kanmusu) cb_dc_ship.getSelectedItem();
-				tp_dc_result.setText(kanmusu.getDropChance(cb_dc_maps.getSelectedItem().toString(), cb_dc_nodes.getSelectedItem().toString())+"%");
+				double res = Core.getSumChance(kanmusu.getDropChance(cb_dc_maps.getSelectedItem().toString(), cb_dc_nodes.getSelectedItem().toString()), Integer.valueOf(tf_dc_tries.getText()));
+				tp_dc_result.setText(res+"%");
 			}
 		}
 
