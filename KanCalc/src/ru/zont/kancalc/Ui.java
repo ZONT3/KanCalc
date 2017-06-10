@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.io.IOException;
 import java.util.Arrays;
 
 import javax.swing.Box;
@@ -16,6 +17,7 @@ import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
 public class Ui {
+	static boolean connectErr = false;
 	
 	static private double farm_rankmult = 1;
 	
@@ -76,7 +78,9 @@ public class Ui {
 		bt_main_cc.addActionListener(listener);
 		bt_main_farm.addActionListener(listener);
 		bt_main_dc.addActionListener(listener);
-		tp_newver.setText("Update: "+getUpdateState());
+		bt_main_cc.setEnabled(false);
+		bt_main_dc.setEnabled(false);
+		tp_newver.setText("Connecting...");
 		tp_newver.setEditable(false);
 		
 		Box b11 = Box.createHorizontalBox();
@@ -215,19 +219,6 @@ public class Ui {
 		frame_dc.add(dc3);
 		frame_dc.add(dc4);
 	}
-	
-	private static String getUpdateState() {
-		switch (Core.update) {
-		case unknown:
-			return Core.newVersion;
-		case ood:
-			return "New "+Core.newVersion+" avaliable";
-		case utd:
-			return "None";
-		default:
-			return "ERROR";
-		}
-	}
 
 	static class eHandler implements ActionListener {
 
@@ -294,7 +285,16 @@ public class Ui {
 			} else if (e.getSource() == cb_dc_ship) {
 				kanmusu = (Kanmusu) cb_dc_ship.getSelectedItem();
 				cb_dc_maps.removeAllItems();
-				buildList(cb_dc_maps, kanmusu.getMaps());
+				try {
+					buildList(cb_dc_maps, kanmusu.getMaps());
+				} catch (IOException e1) {
+					connectErr = true;
+				}
+				if (!connectErr) {
+					bt_main_dc.setEnabled(true);
+					bt_main_cc.setEnabled(true);}
+				tp_newver.setText("Ready.");
+				
 			} else if (e.getSource() == cb_dc_maps) {
 				kanmusu = (Kanmusu) cb_dc_ship.getSelectedItem();
 				String map = (String) cb_dc_maps.getSelectedItem();

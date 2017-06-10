@@ -1,5 +1,6 @@
 package ru.zont.kancalc;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Kanmusu {
@@ -53,13 +54,13 @@ public class Kanmusu {
 			craftchance = 0;
 			return 0;
 		}
-		craftchance = Core.getCCfromKCDB(this);
+		craftchance = KCDB.getCC(this);
 		return craftchance;
 	}
 
-	public Object[] getMaps() {
+	public Object[] getMaps() throws IOException {
 		if (!gotDrops) {
-			drops = Core.getDropsFromKCDB(this);
+			drops = KCDB.getDrops(this);
 			gotDrops = true;
 		}
 		ArrayList<String> res = new ArrayList<>();
