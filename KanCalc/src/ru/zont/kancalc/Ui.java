@@ -5,6 +5,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.util.Arrays;
+
 import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -21,6 +23,7 @@ public class Ui {
 	static JButton bt_main_smuch = new JButton("SUM");
 	static JButton bt_main_farm = new JButton("XP Farm");
 	static JButton bt_main_cc = new JButton("Craft Chance");
+	static JButton bt_main_dc = new JButton("Drop Chance");
 	static JTextPane tp_newver = new JTextPane();
 	
 	static JFrame frame_sumch = new JFrame("SUM chance");
@@ -31,8 +34,7 @@ public class Ui {
 	static JTextPane tp_result = new JTextPane();
 	
 	static JFrame frame_cc = new JFrame("Chance of craft");
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	static JComboBox mb_ship = new JComboBox(Core.kmlist.toArray());
+	static JComboBox<Object> cb_cc_ship = new JComboBox<>(Core.kmlist.toArray());
 	static JTextField tf_cc_tries = new JTextField("Tries");
 	static JTextPane tp_cc_craft = new JTextPane();
 	static JButton bt_cc_go = new JButton("GO");
@@ -44,11 +46,19 @@ public class Ui {
 	static JButton bt_farm_go = new JButton("GO");
 	static JTextField tf_farm_lvls = new JTextField("1-75");
 	static JTextField tf_farm_basexp = new JTextField("320");
-	@SuppressWarnings({ "unchecked", "rawtypes" })
-	static JComboBox mb_farm_rank = new JComboBox(ranks);
+	static JComboBox<String> mb_farm_rank = new JComboBox<>(ranks);
 	static JTextField tf_farm_cons_t = new JTextField("20");
 	static JTextField tf_farm_cons_a = new JTextField("30");
 	static JTextPane tp_farm_result = new JTextPane();
+	
+	static String[] defaultMaps = {"---"};
+	static JFrame frame_dc = new JFrame("Chance of drop");
+	static JComboBox<Object> cb_dc_ship = new JComboBox<>(Core.kmlist.toArray());
+	static JTextField tf_dc_tries = new JTextField("Tries");
+	static JComboBox<Object> cb_dc_maps = new JComboBox<>(defaultMaps);
+	static JComboBox<Object> cb_dc_nodes = new JComboBox<>(defaultMaps);
+	static JTextPane tp_dc_result = new JTextPane();
+	static JButton bt_dc_go = new JButton("GO");
 	
 	static eHandler listener = new eHandler();
 	static weHandler wlistener = new weHandler();
@@ -65,6 +75,7 @@ public class Ui {
 		bt_main_smuch.addActionListener(listener);
 		bt_main_cc.addActionListener(listener);
 		bt_main_farm.addActionListener(listener);
+		bt_main_dc.addActionListener(listener);
 		tp_newver.setText("Update: "+getUpdateState());
 		tp_newver.setEditable(false);
 		
@@ -72,15 +83,19 @@ public class Ui {
 		b11.add(Box.createHorizontalStrut(150));
 		b11.add(bt_main_smuch);
 		b11.add(bt_main_farm);
-		b11.add(bt_main_cc);
 		b11.add(Box.createHorizontalStrut(150));
 		Box b12 = Box.createHorizontalBox();
 		b12.add(Box.createHorizontalStrut(150));
-		b12.add(tp_newver);
+		b12.add(bt_main_cc);
+		b12.add(bt_main_dc);
 		b12.add(Box.createHorizontalStrut(150));
-		
+		Box b13 = Box.createHorizontalBox();
+		b13.add(Box.createHorizontalStrut(150));
+		b13.add(tp_newver);
+		b13.add(Box.createHorizontalStrut(150));
 		frame_main.add(b11);
 		frame_main.add(b12);
+		frame_main.add(b13);
 		
 		//---------------------------------------CC
 		frame_cc.setLayout(new FlowLayout());
@@ -92,11 +107,11 @@ public class Ui {
 		tp_cc_chance.setEditable(false);
 		tp_cc_price.setEditable(false);
 		bt_cc_go.addActionListener(listener);
-		mb_ship.addActionListener(listener);
-		mb_ship.setSelectedItem(Core.getKanmusu("Yuudachi"));
+		cb_cc_ship.addActionListener(listener);
+		cb_cc_ship.setSelectedItem(Core.getKanmusu("Yuudachi"));
 		Box cb1 = Box.createHorizontalBox();
 		cb1.add(Box.createHorizontalStrut(300));
-		cb1.add(mb_ship);
+		cb1.add(cb_cc_ship);
 		cb1.add(Box.createHorizontalStrut(300));		
 		Box cb2 = Box.createHorizontalBox();
 		cb2.add(Box.createHorizontalStrut(300));
@@ -166,6 +181,39 @@ public class Ui {
 		frame_sumch.add(b1);
 		frame_sumch.add(b2);
 		frame_sumch.add(b3);
+		
+		//---------------------------------------------DC
+		frame_dc.setLayout(new FlowLayout());
+		frame_dc.addWindowListener(wlistener);
+		frame_dc.setSize(350, 150);
+		frame_dc.setResizable(false);
+		tp_dc_result.setEditable(false);
+		bt_dc_go.addActionListener(listener);
+		cb_dc_maps.addActionListener(listener);
+		cb_dc_ship.addActionListener(listener);
+		cb_dc_ship.setSelectedItem(Core.getKanmusu("Yuudachi"));
+		Box dc1 = Box.createHorizontalBox();
+		dc1.add(Box.createHorizontalStrut(350));
+		dc1.add(cb_dc_ship);
+		dc1.add(Box.createHorizontalStrut(350));
+		Box dc2 = Box.createHorizontalBox();
+		dc2.add(Box.createHorizontalStrut(350));
+		dc2.add(cb_dc_maps);
+		dc2.add(Box.createHorizontalStrut(350));
+		Box dc3 = Box.createHorizontalBox();
+		dc3.add(Box.createHorizontalStrut(350));
+		dc3.add(tf_dc_tries);
+		dc3.add(cb_dc_nodes);
+		dc3.add(Box.createHorizontalStrut(350));
+		Box dc4 = Box.createHorizontalBox();
+		dc4.add(Box.createHorizontalStrut(350));
+		dc4.add(tp_dc_result);
+		dc4.add(bt_dc_go);
+		dc4.add(Box.createHorizontalStrut(350));
+		frame_dc.add(dc1);
+		frame_dc.add(dc2);
+		frame_dc.add(dc3);
+		frame_dc.add(dc4);
 	}
 	
 	private static String getUpdateState() {
@@ -193,7 +241,7 @@ public class Ui {
 				} catch(Exception er) {
 					JOptionPane.showMessageDialog(null, er, "Error", JOptionPane.ERROR_MESSAGE);
 				}
-			} else if (e.getSource() == bt_main_smuch || e.getSource() == bt_main_cc || e.getSource() == bt_main_farm) {
+			} else if (e.getSource() == bt_main_smuch || e.getSource() == bt_main_cc || e.getSource() == bt_main_farm || e.getSource() == bt_main_dc) {
 				JFrame frame = null;
 				if (e.getSource() == bt_main_smuch)
 					frame = frame_sumch;
@@ -201,6 +249,8 @@ public class Ui {
 					frame = frame_cc;
 				else if (e.getSource() == bt_main_farm)
 					frame = frame_farm;
+				else if (e.getSource() == bt_main_dc)
+					frame = frame_dc;
 				frame.setLocation(frame_main.getLocation());
 				frame_main.setVisible(false);
 				frame.setVisible(true);
@@ -227,21 +277,36 @@ public class Ui {
 				int sts = Core.getSortiresLeft(tf_farm_lvls.getText(), Integer.parseInt(tf_farm_basexp.getText()), farm_rankmult);
 				tp_farm_result.setText(sts+"sts; "+sts*Integer.parseInt(tf_farm_cons_t.getText())+"/"+sts*Integer.parseInt(tf_farm_cons_a.getText())+" F/A");
 			} else if (e.getSource() == bt_cc_go) {
-				kanmusu = (Kanmusu) mb_ship.getSelectedItem();
+				kanmusu = (Kanmusu) cb_cc_ship.getSelectedItem();
 				if (kanmusu.craft != "unbuildable") {
 					double chance = Core.getSumChance(kanmusu.getCraftchance(), Integer.parseInt(tf_cc_tries.getText()));
 					chance = (double)Math.rint(1000*chance)/1000;
 					tp_cc_price.setText(Core.getPrice(Integer.parseInt(tf_cc_tries.getText()), kanmusu));
 					tp_cc_chance.setText(chance+"%");
 				}
-			} else if (e.getSource() == mb_ship) {
-				kanmusu = (Kanmusu) mb_ship.getSelectedItem();
+			} else if (e.getSource() == cb_cc_ship) {
+				kanmusu = (Kanmusu) cb_cc_ship.getSelectedItem();
 				tp_cc_craft.setText(kanmusu.craft);
 				if (kanmusu.craft == "unbuildable") {
 					tp_cc_price.setText("-----------");
 					tp_cc_chance.setText("-----------");
 				}
+			} else if (e.getSource() == cb_dc_ship) {
+				kanmusu = (Kanmusu) cb_dc_ship.getSelectedItem();
+				cb_dc_maps.removeAllItems();
+				buildList(cb_dc_maps, kanmusu.getMaps());
+			} else if (e.getSource() == cb_dc_maps) {
+				kanmusu = (Kanmusu) cb_dc_ship.getSelectedItem();
+				String map = (String) cb_dc_maps.getSelectedItem();
+				cb_dc_nodes.removeAllItems();
+				buildList(cb_dc_nodes, kanmusu.getNodes(map));
 			}
+		}
+
+		private void buildList(JComboBox<Object> list, Object[] content) {
+			Arrays.sort(content);
+			for (int i = 0; i < content.length; i++)
+				list.addItem(content[i]);
 		}
 		
 	}
