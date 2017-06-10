@@ -300,6 +300,9 @@ public class Ui {
 				String map = (String) cb_dc_maps.getSelectedItem();
 				cb_dc_nodes.removeAllItems();
 				buildList(cb_dc_nodes, kanmusu.getNodes(map));
+			} else if (e.getSource() == bt_dc_go) {
+				kanmusu = (Kanmusu) cb_dc_ship.getSelectedItem();
+				tp_dc_result.setText(kanmusu.getDropChance(cb_dc_maps.getSelectedItem().toString(), cb_dc_nodes.getSelectedItem().toString())+"%");
 			}
 		}
 

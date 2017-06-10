@@ -83,4 +83,12 @@ public class Kanmusu {
 					res.add(drops.get(i).nodes.get(j).name);
 		return res.toArray();
 	}
+
+	public double getDropChance(String map, String node) {
+		for (int i=0; i<drops.size(); i++)
+			for (int j=0; j<drops.get(i).nodes.size(); i++)
+				if (drops.get(i).nodes.get(j).name.equals(node) && drops.get(i).name.equals(map))
+					return drops.get(i).nodes.get(j).chance;
+		return -1;
+	}
 }
