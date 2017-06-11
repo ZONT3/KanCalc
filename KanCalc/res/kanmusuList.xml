@@ -896,7 +896,7 @@
 			<suffix>Kai</suffix>
 			<suffixJP>改</suffixJP>
 		</remodel>
-		<remodel index="1" lvl="50">
+		<remodel index="2" lvl="50">
 			<id>141</id>
 			<nid>141</nid>
 			<hp></hp><hpM></hpM>
@@ -1019,7 +1019,7 @@
 			<suffix>Kai</suffix>
 			<suffixJP>改</suffixJP>
 		</remodel>
-		<remodel index="1" lvl="50">
+		<remodel index="2" lvl="50" type="CLT">
 			<id>118</id>
 			<nid>114</nid>
 			<hp></hp><hpM></hpM>
@@ -1092,7 +1092,7 @@
 			<suffix>Kai</suffix>
 			<suffixJP>改</suffixJP>
 		</remodel>
-		<remodel index="1" lvl="50">
+		<remodel index="2" lvl="50" type="CLT">
 			<id>119</id>
 			<nid>115</nid>
 			<hp></hp><hpM></hpM>
@@ -1170,7 +1170,7 @@
 			<suffix>Kai</suffix>
 			<suffixJP>改</suffixJP>
 		</remodel>
-		<remodel index="1" lvl="80" type="BBV">
+		<remodel index="2" lvl="80" type="BBV">
 			<id>411</id>
 			<nid>211</nid>
 			<hp></hp><hpM></hpM>
@@ -1249,7 +1249,7 @@
 			<suffix>Kai</suffix>
 			<suffixJP>改</suffixJP>
 		</remodel>
-		<remodel index="1" lvl="80" newtype="BBV">
+		<remodel index="2" lvl="80" newtype="BBV">
 			<id>412</id>
 			<nid>212</nid>
 			<hp></hp><hpM></hpM>
@@ -1324,7 +1324,7 @@
 			<suffix>Kai</suffix>
 			<suffixJP>改</suffixJP>
 		</remodel>
-		<remodel index="1" lvl="75">
+		<remodel index="2" lvl="75">
 			<id>418</id>
 			<nid>218</nid>
 			<hp></hp><hpM></hpM>
@@ -1598,7 +1598,7 @@
 			<suffix>Kai</suffix>
 			<suffixJP>改</suffixJP>
 		</remodel>
-		<remodel index="1" lvl="70">
+		<remodel index="2" lvl="70">
 			<id>420</id>
 			<nid>220</nid>
 			<hp></hp><hpM></hpM>
@@ -1746,7 +1746,7 @@
 			<suffix>Kai</suffix>
 			<suffixJP>改</suffixJP>
 		</remodel>
-		<remodel index="1" lvl="70">
+		<remodel index="2" lvl="70">
 			<id>147</id>
 			<nid>147</nid>
 			<name>Verniy</name>
@@ -4195,6 +4195,60 @@
 			<ammo>45</ammo>
 			<suffix>Kai Ni</suffix>
 			<suffixJP>改二</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="BB">
+		<id>77</id>
+		<nid>3</nid>
+		<name>Ise</name>
+		<nameJP>伊勢</nameJP>
+		<craft>400/100/600/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="4">
+				<slot id="0">3</slot>
+				<slot id="1">3</slot>
+				<slot id="2">3</slot>
+				<slot id="3">3</slot>
+			</slots>
+			<fuel>85</fuel>
+			<ammo>120</ammo>
+		</stats>
+		<remodel index="1" lvl="20" type="BBV">
+			<id>287</id>
+			<nid>1387</nid>
+			<newtype>BBV</newtype>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="4">
+				<slot id="0">11</slot>
+				<slot id="1">11</slot>
+				<slot id="2">11</slot>
+				<slot id="3">14</slot>
+			</slots>
+			<fuel>95</fuel>
+			<ammo>105</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
 </ships>
