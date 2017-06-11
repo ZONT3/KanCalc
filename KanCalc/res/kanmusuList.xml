@@ -5628,4 +5628,78 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
+	<ship type="CL">
+		<id>101</id>
+		<nid>41</nid>
+		<name>Kiso</name>
+		<nameJP>木曾</nameJP>
+		<craft>250/130/200/30</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="2">
+				<slot id="0">1</slot>
+				<slot id="1">1</slot>
+			</slots>
+			<fuel>25</fuel>
+			<ammo>25</ammo>
+		</stats>
+		<remodel index="1" lvl="20">
+			<id>217</id>
+			<nid>1317</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">1</slot>
+				<slot id="1">1</slot>
+				<slot id="3">1</slot>
+			</slots>
+			<fuel>25</fuel>
+			<ammo>30</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+		<remodel index="2" lvl="65" type="CLT">
+			<id>146</id>
+			<nid>146</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>25</fuel>
+			<ammo>50</ammo>
+			<suffix>Kai Ni</suffix>
+			<suffixJP>改二</suffixJP>
+		</remodel>
+	</ship>
 </ships>
