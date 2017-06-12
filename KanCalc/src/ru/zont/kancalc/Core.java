@@ -23,7 +23,7 @@ public class Core {
 	
 	private static int[] diff = new int[99];
 	
-	public static final String version = "0.3.0";
+	public static final String version = "0.3.1";
 	public static UpdateState update = UpdateState.unknown;
 	public static String newVersion = "?";
 	

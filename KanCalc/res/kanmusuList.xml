@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ships>
-	<ship type="DD">
+	<ship type="DD" class="Mutsuki">
 		<id>1</id>
 		<nid>31</nid>
 		<name>Mutsuki</name>
@@ -74,7 +74,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Mutsuki">
 		<id>2</id>
 		<nid>32</nid>
 		<name>Kisaragi</name>
@@ -148,7 +148,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Mutsuki">
 		<id>6</id>
 		<nid>35</nid>
 		<name>Nagatsuki</name>
@@ -198,7 +198,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Mutsuki">
 		<id>7</id>
 		<nid>37</nid>
 		<name>Mikazuki</name>
@@ -248,7 +248,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Fubuki">
 		<id>9</id>
 		<nid>11</nid>
 		<name>Fubuki</name>
@@ -322,7 +322,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Fubuki">
 		<id>10</id>
 		<nid>12</nid>
 		<name>Shirayuki</name>
@@ -373,7 +373,7 @@
 		</remodel>
 	</ship>
 	
-	<ship type="DD">
+	<ship type="DD" class="Fubuki">
 		<id>12</id>
 		<nid>16</nid>
 		<name>Isonami</name>
@@ -423,7 +423,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Ayanami">
 		<id>14</id>
 		<nid>18</nid>
 		<name>Shikinami</name>
@@ -473,7 +473,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Ayanami">
 		<id>15</id>
 		<nid>68</nid>
 		<name>Akebono</name>
@@ -523,7 +523,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Ayanami">
 		<id>16</id>
 		<nid>70</nid>
 		<name>Ushio</name>
@@ -597,7 +597,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Kagerou">
 		<id>17</id>
 		<nid>91</nid>
 		<name>Kagerou</name>
@@ -647,7 +647,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Kagerou">
 		<id>18</id>
 		<nid>92</nid>
 		<name>Shiranui</name>
@@ -697,7 +697,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Kagerou">
 		<id>19</id>
 		<nid>93</nid>
 		<name>Kuroshio</name>
@@ -747,7 +747,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Kagerou">
 		<id>20</id>
 		<nid>5</nid>
 		<name>Yukikaze</name>
@@ -797,7 +797,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CL">
+	<ship type="CL" class="Nagara">
 		<id>21</id>
 		<nid>42</nid>
 		<name>Nagara</name>
@@ -847,7 +847,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CL">
+	<ship type="CL" class="Nagara">
 		<id>22</id>
 		<nid>43</nid>
 		<name>Isuzu</name>
@@ -921,7 +921,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CL">
+	<ship type="CL" class="Nagara">
 		<id>23</id>
 		<nid>45</nid>
 		<name>Yura</name>
@@ -971,7 +971,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CL">
+	<ship type="CL" class="Kuma">
 		<id>24</id>
 		<nid>19</nid>
 		<name>Ooi</name>
@@ -1044,7 +1044,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CL">
+	<ship type="CL" class="Kuma">
 		<id>25</id>
 		<nid>20</nid>
 		<name>Kitakami</name>
@@ -1117,7 +1117,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="BB">
+	<ship type="BB" class="Fusou">
 		<id>26</id>
 		<nid>26</nid>
 		<name>Fusou</name>
@@ -1144,7 +1144,7 @@
 			<fuel>85</fuel>
 			<ammo>120</ammo>
 		</stats>
-		<remodel index="1" lvl="20">
+		<remodel index="1" lvl="20" type="BBV">
 			<id>286</id>
 			<nid>1386</nid>
 			<newtype>BBV</newtype>
@@ -1170,7 +1170,7 @@
 			<suffix>Kai</suffix>
 			<suffixJP>改</suffixJP>
 		</remodel>
-		<remodel index="2" lvl="80" type="BBV">
+		<remodel index="2" lvl="80">
 			<id>411</id>
 			<nid>211</nid>
 			<hp></hp><hpM></hpM>
@@ -1196,7 +1196,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="BB">
+	<ship type="BB" class="Fusou">
 		<id>27</id>
 		<nid>27</nid>
 		<name>Yamashiro</name>
@@ -1223,10 +1223,9 @@
 			<fuel>85</fuel>
 			<ammo>120</ammo>
 		</stats>
-		<remodel index="1" lvl="20">
+		<remodel index="1" lvl="20" type="BBV">
 			<id>287</id>
 			<nid>1387</nid>
-			<newtype>BBV</newtype>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
 			<tp></tp><tpB></tpB>
@@ -1249,7 +1248,7 @@
 			<suffix>Kai</suffix>
 			<suffixJP>改</suffixJP>
 		</remodel>
-		<remodel index="2" lvl="80" newtype="BBV">
+		<remodel index="2" lvl="80">
 			<id>412</id>
 			<nid>212</nid>
 			<hp></hp><hpM></hpM>
@@ -1275,7 +1274,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Mutsuki">
 		<id>28</id>
 		<nid>33</nid>
 		<name>Satsuki</name>
@@ -1349,7 +1348,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Mutsuki">
 		<id>29</id>
 		<nid>34</nid>
 		<name>Fumizuki</name>
@@ -1399,7 +1398,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Mutsuki">
 		<id>30</id>
 		<nid>36</nid>
 		<name>Kikuzuki</name>
@@ -1449,7 +1448,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Mutsuki">
 		<id>31</id>
 		<nid>38</nid>
 		<name>Mochizuki</name>
@@ -1499,7 +1498,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Fubuki">
 		<id>32</id>
 		<nid>13</nid>
 		<name>Hatsuyuki</name>
@@ -1549,7 +1548,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Fubuki">
 		<id>33</id>
 		<nid>15</nid>
 		<name>Murakumo</name>
@@ -1623,7 +1622,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Akatsuki">
 		<id>34</id>
 		<nid>71</nid>
 		<name>Akatsuki</name>
@@ -1697,7 +1696,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Akatsuki">
 		<id>35</id>
 		<nid>72</nid>
 		<name>Hibiki</name>
@@ -1771,7 +1770,7 @@
 			<ammo>25</ammo>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Akatsuki">
 		<id>36</id>
 		<nid>73</nid>
 		<name>Ikazuchi</name>
@@ -1821,7 +1820,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Akatsuki">
 		<id>37</id>
 		<nid>74</nid>
 		<name>Inazuma</name>
@@ -1871,7 +1870,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Hatsuharu">
 		<id>38</id>
 		<nid>75</nid>
 		<name>Hatsuharu</name>
@@ -1945,7 +1944,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Hatsuharu">
 		<id>39</id>
 		<nid>76</nid>
 		<name>Nenohi</name>
@@ -1995,7 +1994,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Hatsuharu">
 		<id>40</id>
 		<nid>77</nid>
 		<name>Wakaba</name>
@@ -2045,7 +2044,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Hatsuharu">
 		<id>41</id>
 		<nid>78</nid>
 		<name>Hatsushimo</name>
@@ -2119,7 +2118,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Shiratsuyu">
 		<id>42</id>
 		<nid>79</nid>
 		<name>Shiratsuyu</name>
@@ -2169,7 +2168,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Shiratsuyu">
 		<id>43</id>
 		<nid>80</nid>
 		<name>Shigure</name>
@@ -2243,7 +2242,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Shiratsuyu">
 		<id>44</id>
 		<nid>81</nid>
 		<name>Murasame</name>
@@ -2293,7 +2292,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Shiratsuyu">
 		<id>45</id>
 		<nid>82</nid>
 		<name>Yuudachi</name>
@@ -2367,7 +2366,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Shiratsuyu">
 		<id>46</id>
 		<nid>83</nid>
 		<name>Samidare</name>
@@ -2417,7 +2416,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Shiratsuyu">
 		<id>47</id>
 		<nid>84</nid>
 		<name>Suzukaze</name>
@@ -2467,7 +2466,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Asashio">
 		<id>48</id>
 		<nid>89</nid>
 		<name>Arare</name>
@@ -2517,7 +2516,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Asashio">
 		<id>49</id>
 		<nid>90</nid>
 		<name>Kasumi</name>
@@ -2615,7 +2614,7 @@
 			<suffixJP>改二乙</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Shimakaze">
 		<id>50</id>
 		<nid>10</nid>
 		<name>Shimakaze</name>
@@ -2665,7 +2664,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CL">
+	<ship type="CL" class="Tenryuu">
 		<id>51</id>
 		<nid>28</nid>
 		<name>Tenryuu</name>
@@ -2715,7 +2714,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CL">
+	<ship type="CL" class="Tenryuu">
 		<id>52</id>
 		<nid>29</nid>
 		<name>Tatsuta</name>
@@ -2765,7 +2764,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CL">
+	<ship type="CL" class="Nagara">
 		<id>53</id>
 		<nid>44</nid>
 		<name>Natori</name>
@@ -2815,7 +2814,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CL">
+	<ship type="CL" class="Sendai">
 		<id>54</id>
 		<nid>46</nid>
 		<name>Sendai</name>
@@ -2889,7 +2888,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CL">
+	<ship type="CL" class="Sendai">
 		<id>55</id>
 		<nid>47</nid>
 		<name>Jintsuu</name>
@@ -2963,7 +2962,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CL">
+	<ship type="CL" class="Sendai">
 		<id>56</id>
 		<nid>48</nid>
 		<name>Naka</name>
@@ -3037,7 +3036,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CA">
+	<ship type="CA" class="Furutaka">
 		<id>59</id>
 		<nid>52</nid>
 		<name>Furutaka</name>
@@ -3114,7 +3113,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CA">
+	<ship type="CA" class="Furutaka">
 		<id>60</id>
 		<nid>53</nid>
 		<name>Kako</name>
@@ -3191,7 +3190,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CA">
+	<ship type="CA" class="Aoba">
 		<id>61</id>
 		<nid>54</nid>
 		<name>Aoba</name>
@@ -3243,7 +3242,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CA">
+	<ship type="CA" class="Myokou">
 		<id>62</id>
 		<nid>55</nid>
 		<name>Myokou</name>
@@ -3320,7 +3319,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CA">
+	<ship type="CA" class="Myokou">
 		<id>63</id>
 		<nid>56</nid>
 		<name>Nachi</name>
@@ -3397,7 +3396,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CA">
+	<ship type="CA" class="Myokou">
 		<id>64</id>
 		<nid>57</nid>
 		<name>Ashigara</name>
@@ -3474,7 +3473,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CA">
+	<ship type="CA" class="Myokou">
 		<id>65</id>
 		<nid>58</nid>
 		<name>Haguro</name>
@@ -3551,7 +3550,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CA">
+	<ship type="CA" class="Takao">
 		<id>66</id>
 		<nid>59</nid>
 		<name>Takao</name>
@@ -3603,7 +3602,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CA">
+	<ship type="CA" class="Takao">
 		<id>67</id>
 		<nid>60</nid>
 		<name>Atago</name>
@@ -3655,7 +3654,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CA">
+	<ship type="CA" class="Takao">
 		<id>68</id>
 		<nid>61</nid>
 		<name>Maya</name>
@@ -3732,7 +3731,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CA">
+	<ship type="CA" class="Takao">
 		<id>69</id>
 		<nid>62</nid>
 		<name>Choukai</name>
@@ -3809,7 +3808,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CA">
+	<ship type="CA" class="Mogami">
 		<id>70</id>
 		<nid>51</nid>
 		<name>Mogami</name>
@@ -3861,7 +3860,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CA">
+	<ship type="CA" class="Tone">
 		<id>71</id>
 		<nid>63</nid>
 		<name>Tone</name>
@@ -3938,7 +3937,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CA">
+	<ship type="CA" class="Tone">
 		<id>72</id>
 		<nid>64</nid>
 		<name>Chikuma</name>
@@ -4015,7 +4014,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CVL">
+	<ship type="CVL" class="Shouhou">
 		<id>74</id>
 		<nid>94</nid>
 		<name>Shouhou</name>
@@ -4067,7 +4066,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CVL">
+	<ship type="CVL" class="Hiyou">
 		<id>75</id>
 		<nid>65</nid>
 		<name>Hiyou</name>
@@ -4120,7 +4119,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CVL">
+	<ship type="CVL" class="Ryuujou">
 		<id>76</id>
 		<nid>30</nid>
 		<name>Ryuujou</name>
@@ -4197,7 +4196,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="BB">
+	<ship type="BB" class="Ise">
 		<id>77</id>
 		<nid>3</nid>
 		<name>Ise</name>
@@ -4250,7 +4249,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="BB">
+	<ship type="BB" class="Kongou">
 		<id>78</id>
 		<nid>21</nid>
 		<name>Kongou</name>
@@ -4327,7 +4326,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="BB">
+	<ship type="BB" class="Kongou">
 		<id>79</id>
 		<nid>23</nid>
 		<name>Haruna</name>
@@ -4404,7 +4403,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="BB">
+	<ship type="BB" class="Nagato">
 		<id>80</id>
 		<nid>1</nid>
 		<name>Nagato</name>
@@ -4482,7 +4481,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="BB">
+	<ship type="BB" class="Mutsu">
 		<id>81</id>
 		<nid>2</nid>
 		<name>Mutsu</name>
@@ -4535,7 +4534,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CV">
+	<ship type="CV" class="Akagi">
 		<id>83</id>
 		<nid>6</nid>
 		<name>Akagi</name>
@@ -4588,7 +4587,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CV">
+	<ship type="CV" class="Kaga">
 		<id>84</id>
 		<nid>7</nid>
 		<name>Kaga</name>
@@ -4641,7 +4640,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="BB">
+	<ship type="BB" class="Kongou">
 		<id>85</id>
 		<nid>24</nid>
 		<name>Kirishima</name>
@@ -4718,7 +4717,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="BB">
+	<ship type="BB" class="Kongou">
 		<id>86</id>
 		<nid>22</nid>
 		<name>Hiei</name>
@@ -4795,7 +4794,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="BB">
+	<ship type="BB" class="Ise">
 		<id>87</id>
 		<nid>4</nid>
 		<name>Hyuuga</name>
@@ -4848,7 +4847,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CVL">
+	<ship type="CVL" class="Hoshou">
 		<id>89</id>
 		<nid>25</nid>
 		<name>Hoshou</name>
@@ -4898,7 +4897,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CV">
+	<ship type="CV" class="Souryuu">
 		<id>90</id>
 		<nid>8</nid>
 		<name>Souryuu</name>
@@ -4976,7 +4975,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CV">
+	<ship type="CV" class="Hiryuu">
 		<id>91</id>
 		<nid>9</nid>
 		<name>Hiryuu</name>
@@ -5054,7 +5053,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CVL">
+	<ship type="CVL" class="Hiyou">
 		<id>92</id>
 		<nid>66</nid>
 		<name>Junyou</name>
@@ -5132,7 +5131,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Ayanami">
 		<id>93</id>
 		<nid>67</nid>
 		<name>Oboro</name>
@@ -5182,7 +5181,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Ayanami">
 		<id>94</id>
 		<nid>69</nid>
 		<name>Sazanami</name>
@@ -5232,7 +5231,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Asashio">
 		<id>95</id>
 		<nid>85</nid>
 		<name>Asashio</name>
@@ -5330,7 +5329,7 @@
 			<suffixJP>改二丁</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Asashio">
 		<id>96</id>
 		<nid>86</nid>
 		<name>Ooshio</name>
@@ -5404,7 +5403,7 @@
 			<suffixJP>改二</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Asashio">
 		<id>97</id>
 		<nid>87</nid>
 		<name>Michishio</name>
@@ -5454,7 +5453,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="DD">
+	<ship type="DD" class="Asashio">
 		<id>98</id>
 		<nid>88</nid>
 		<name>Arashio</name>
@@ -5528,7 +5527,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CL">
+	<ship type="CL" class="Kuma">
 		<id>99</id>
 		<nid>39</nid>
 		<name>Kuma</name>
@@ -5578,7 +5577,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CL">
+	<ship type="CL" class="Kuma">
 		<id>100</id>
 		<nid>40</nid>
 		<name>Tama</name>
@@ -5628,7 +5627,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CL">
+	<ship type="CL" class="Kuma">
 		<id>101</id>
 		<nid>41</nid>
 		<name>Kiso</name>
@@ -5700,6 +5699,371 @@
 			<ammo>50</ammo>
 			<suffix>Kai Ni</suffix>
 			<suffixJP>改二</suffixJP>
+		</remodel>
+	</ship>
+
+	<comm>====================================================================ЗДЕСЬ====БЛЯТЬ====================================</comm>
+
+	<ship type="CL">
+		<id>137</id>
+		<nid>137</nid>
+		<name>Agano</name>
+		<nameJP>阿賀野</nameJP>
+		<craft>lsc</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">2</slot>
+				<slot id="1">2</slot>
+				<slot id="2">2</slot>
+			</slots>
+			<fuel>30</fuel>
+			<ammo>35</ammo>
+		</stats>
+		<remodel index="1" lvl="35">
+			<id>305</id>
+			<nid>1401</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">2</slot>
+				<slot id="1">2</slot>
+				<slot id="2">2</slot>
+			</slots>
+			<fuel>30</fuel>
+			<ammo>40</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="CL">
+		<id>138</id>
+		<nid>138</nid>
+		<name>Noshiro</name>
+		<nameJP>能代</nameJP>
+		<craft>lsc</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">2</slot>
+				<slot id="1">2</slot>
+				<slot id="2">2</slot>
+			</slots>
+			<fuel>30</fuel>
+			<ammo>35</ammo>
+		</stats>
+		<remodel index="1" lvl="35">
+			<id>306</id>
+			<nid>1402</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">2</slot>
+				<slot id="1">2</slot>
+				<slot id="2">2</slot>
+			</slots>
+			<fuel>30</fuel>
+			<ammo>40</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="CL">
+		<id>139</id>
+		<nid>139</nid>
+		<name>Yahagi</name>
+		<nameJP>矢矧</nameJP>
+		<craft>lsc</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">2</slot>
+				<slot id="1">2</slot>
+				<slot id="2">2</slot>
+			</slots>
+			<fuel>30</fuel>
+			<ammo>35</ammo>
+		</stats>
+		<remodel index="1" lvl="35">
+			<id>307</id>
+			<nid>1403</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">2</slot>
+				<slot id="1">2</slot>
+				<slot id="2">2</slot>
+			</slots>
+			<fuel>30</fuel>
+			<ammo>40</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="CL">
+		<id>140</id>
+		<nid>140</nid>
+		<name>Sakawa</name>
+		<nameJP>酒匂</nameJP>
+		<craft>lsc</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">2</slot>
+				<slot id="1">2</slot>
+				<slot id="2">2</slot>
+			</slots>
+			<fuel>30</fuel>
+			<ammo>35</ammo>
+		</stats>
+		<remodel index="1" lvl="35">
+			<id>308</id>
+			<nid>1404</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">2</slot>
+				<slot id="1">2</slot>
+				<slot id="2">2</slot>
+			</slots>
+			<fuel>30</fuel>
+			<ammo>40</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="BB">
+		<id>143</id>
+		<nid>143</nid>
+		<name>Musashi</name>
+		<nameJP>武蔵</nameJP>
+		<craft>4000/7000/7000/2000</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="4">
+				<slot id="0">7</slot>
+				<slot id="1">7</slot>
+				<slot id="2">7</slot>
+				<slot id="3">7</slot>
+			</slots>
+			<fuel>250</fuel>
+			<ammo>300</ammo>
+		</stats>
+		<remodel index="1" lvl="40">
+			<id>148</id>
+			<nid>148</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="4">
+				<slot id="0">7</slot>
+				<slot id="1">7</slot>
+				<slot id="2">7</slot>
+				<slot id="3">7</slot>
+			</slots>
+			<fuel>250</fuel>
+			<ammo>325</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="CVB">
+		<id>153</id>
+		<nid>153</nid>
+		<name>Taihou</name>
+		<nameJP>大鳳</nameJP>
+		<craft>4000/2000/5000/7000</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="4">
+				<slot id="0">18</slot>
+				<slot id="1">18</slot>
+				<slot id="2">18</slot>
+				<slot id="3">7</slot>
+			</slots>
+			<fuel>70</fuel>
+			<ammo>65</ammo>
+		</stats>
+		<remodel index="1" lvl="40">
+			<id>156</id>
+			<nid>156</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="4">
+				<slot id="0">30</slot>
+				<slot id="1">24</slot>
+				<slot id="2">24</slot>
+				<slot id="3">8</slot>
+			</slots>
+			<fuel>90</fuel>
+			<ammo>75</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="CT">
+		<id>154</id>
+		<nid>154</nid>
+		<name>Katori</name>
+		<nameJP>香取</nameJP>
+		<craft>?</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">1</slot>
+				<slot id="1">1</slot>
+				<slot id="2">1</slot>
+			</slots>
+			<fuel>30</fuel>
+			<ammo>15</ammo>
+		</stats>
+		<remodel index="1" lvl="35">
+			<id>343</id>
+			<nid>1423</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">2</slot>
+				<slot id="1">2</slot>
+				<slot id="2">2</slot>
+				<slot id="3">2</slot>
+			</slots>
+			<fuel>25</fuel>
+			<ammo>30</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
 </ships>

@@ -301,7 +301,9 @@ public class Ui {
 				buildList(cb_dc_nodes, kanmusu.getNodes(map));
 			} else if (e.getSource() == bt_dc_go) {
 				kanmusu = (Kanmusu) cb_dc_ship.getSelectedItem();
-				double res = Core.getSumChance(kanmusu.getDropChance(cb_dc_maps.getSelectedItem().toString(), cb_dc_nodes.getSelectedItem().toString()), Integer.valueOf(tf_dc_tries.getText()));
+				double res = Core.getSumChance(kanmusu.getDropChance(cb_dc_maps.getSelectedItem().toString(), 
+						cb_dc_nodes.getSelectedItem().toString()), Integer.valueOf(tf_dc_tries.getText()));
+				res = (Double)Math.rint(res*1000)/1000;
 				tp_dc_result.setText(res+"%");
 			}
 		}
