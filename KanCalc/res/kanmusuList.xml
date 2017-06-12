@@ -5706,7 +5706,7 @@
 		<nid>49</nid>
 		<name>Chitose</name>
 		<nameJP>千歳</nameJP>
-		<craft>AVcraft!</craft>
+		<craft>300/30/400/330</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -5856,7 +5856,7 @@
 		<nid>50</nid>
 		<name>Chiyoda</name>
 		<nameJP>千代田</nameJP>
-		<craft>AVcraft!</craft>
+		<craft>300/30/400/330</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -6360,7 +6360,7 @@
 		<nid>111</nid>
 		<name>Yuubari</name>
 		<nameJP>夕張</nameJP>
-		<craft>250/130/200/30</craft>
+		<craft>30/30/30/40</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -6406,12 +6406,13 @@
 			<suffix>Kai</suffix>
 			<suffixJP>改</suffixJP>
 		</remodel>
-		<ship type="CVL" class="Zuihou">
+	</ship>
+	<ship type="CVL" class="Zuihou">
 		<id>116</id>
 		<nid>112</nid>
 		<name>Zuihou</name>
 		<nameJP>瑞鳳</nameJP>
-		<craft>zuihoucraft!</craft>
+		<craft>300/300/600/600</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -6463,7 +6464,7 @@
 		<nid>116</nid>
 		<name>Mikuma</name>
 		<nameJP>三隈</nameJP>
-		<craft>三隈craft!</craft>
+		<craft>1500/1500/2000/1000</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -6565,7 +6566,7 @@
 		<nid>120</nid>
 		<name>Kinugasa</name>
 		<nameJP>衣笠</nameJP>
-		<craft>kinugasa!</craft>
+		<craft>400/100/600/30</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -6847,8 +6848,8 @@
 		<id>126</id>
 		<nid>126</nid>
 		<name>I-168 "Imuya"</name>
-		<nameJP>伊168　「イムヤ」</nameJP>
-		<craft></craft>
+		<nameJP>伊168 「イムヤ」</nameJP>
+		<craft>250/130/200/30</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -6890,12 +6891,13 @@
 			<suffix>Kai</suffix>
 			<suffixJP>改</suffixJP>
 		</remodel>
+	</ship>
 	<ship type="SS" class="Junsen Type B Kai Ni">
 		<id>127</id>
 		<nid>127</nid>
 		<name>I-58 "Goya"</name>
-		<nameJP>伊58　「ゴーヤ」</nameJP>
-		<craft></craft>
+		<nameJP>伊58 「ゴーヤ」</nameJP>
+		<craft>250/130/200/30</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -6942,8 +6944,8 @@
 		<id>128</id>
 		<nid>128</nid>
 		<name>I-8 "Hachi"</name>
-		<nameJP>伊8　「ハーチ」</nameJP>
-		<craft></craft>
+		<nameJP>伊8 「ハーチ」</nameJP>
+		<craft>250/130/200/30</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -6991,7 +6993,7 @@
 		<nid>191</nid>
 		<name>I-19 "Iku"</name>
 		<nameJP>伊19 「イク」</nameJP>
-		<craft></craft>
+		<craft>unbuildable</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -7039,7 +7041,7 @@
 		<nid>131</nid>
 		<name>Yamato</name>
 		<nameJP>大和</nameJP>
-		<craft></craft>
+		<craft>4000/6000/6000/2000</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -7092,7 +7094,7 @@
 		<nid>132</nid>
 		<name>Akigumo</name>
 		<nameJP>秋雲</nameJP>
-		<craft>akigumo!</craft>
+		<craft>30/30/30/30</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -7653,7 +7655,7 @@
 		<id>155</id>
 		<nid>155</nid>
 		<name>I-401 "Shioi"</name>
-		<nameJP>伊401　「シオイ」</nameJP>
+		<nameJP>伊401 「シオイ」</nameJP>
 		<craft>3500/4500/4500/2000</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
