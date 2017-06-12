@@ -2,35 +2,23 @@ package ru.zont.kancalc;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import ru.zont.kancalc.Kanmusu.Map;
 
-public class Core {
-	
-	static final String kmlistDir = "/kanmusuList.xml";
-	
+public class Core {	
 	enum UpdateState {unknown, ood, utd}
 	
 	private static int[] diff = new int[99];
 	
-	public static final String version = "0.3.1";
+	public static final String version = "0.3.2";
 	public static UpdateState update = UpdateState.unknown;
 	public static String newVersion = "?";
-	
-	static DocumentBuilder db;
-	static Document kmlistFile;
-	static Node root;
-	static NodeList kms;
+
 	static boolean craftscheck = false;
 	
 	public static ArrayList<Kanmusu> kmlist = new ArrayList<>();
@@ -48,114 +36,51 @@ public class Core {
 			}
 		}
 		
-		db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-		kmlistFile = db.parse(Core.class.getResourceAsStream(kmlistDir));
-		root = kmlistFile.getDocumentElement();
-		kms = root.getChildNodes();
+		
 		
 		initLevels();
-		initKMlist();
+		kmlist = KMParser.getKMList();
 		if (craftscheck)
 			checkCrafts();
+		kmsort(kmlist);
 		Ui.init();
 	}
+	
+	
+
+	private static void kmsort(ArrayList<Kanmusu> list) {
+		list.sort(new Comparator<Kanmusu>() {
+			@Override
+			public int compare(Kanmusu arg0, Kanmusu arg1) {
+				return arg0.nid-arg1.nid;
+			}
+		});
+	}
+
+
 
 	private static void checkCrafts() {
-		for (int i=0; i<kmlist.size(); i++)
-			kmlist.get(i).getCraftchance();
-	}
-
-	private static void initKMlist() throws ParserConfigurationException, SAXException, IOException {
-		for (int i = 0; i<kms.getLength(); i++) {
-			Kanmusu kmsu = getKanmusuFromFile(i);
-			if (kmsu != null)
-				kmlist.add(kmsu);
+		Ui.CCCi();
+		for (int i=0; i<kmlist.size(); i++) {
+			double ch = kmlist.get(i).getCraftchance();
+			Ui.CCCc(kmlist.size(), i, "N:\""+kmlist.get(i).name+"\" C:"+kmlist.get(i).craft+" V:"+ch);
 		}
+		Ui.CCCe();
 	}
 	
-	public static Kanmusu getKanmusu(String name) {
+	public static Kanmusu getKanmusu(String name, ArrayList<Kanmusu> list) {
 		// Хуйня какая-то, не робит
 		// O, заробила, магия
-		for (int i = 0; i<kmlist.size(); i++)
-			if (kmlist.get(i).name.equals(name))
-				return kmlist.get(i);
+		for (int i = 0; i<list.size(); i++)
+			if (list.get(i).name.equals(name))
+				return list.get(i);
 		return null;
 	}
 	
-	public static Kanmusu getKanmusu(int id) {
-		for (int i = 0; i<kmlist.size(); i++) {
-			if (kmlist.get(i).id == id)
-				return kmlist.get(i);
-		}
-		return null;
-	}
-
-	private static Kanmusu getKanmusuFromFile(int i) throws ParserConfigurationException, SAXException, IOException {
-		Node km = kms.item(i);
-		if (km.getNodeName() == "ship") {
-			Element kmE = (Element) km;
-			Kanmusu kanmusu = new Kanmusu(kmE.getAttribute("type"));
-			NodeList kmps = km.getChildNodes();
-			for (int j = 0; j < kmps.getLength(); j++) {
-				if (kmps.item(j).getNodeType() == Node.ELEMENT_NODE) {
-					Element kmp = (Element) kmps.item(j);
-					//System.out.println(kmp.getNodeName()+"="+kmp.getTextContent());
-					switch (kmp.getNodeName()) {
-					case "id":
-						kanmusu.id = Integer.valueOf(kmp.getTextContent());
-						break;
-					case "name":
-						kanmusu.name = kmp.getTextContent();
-						break;
-					case "nameJP":
-						if (kmp.hasAttribute("original")) {
-							kanmusu.oname = kmp.getAttribute("original");
-							kanmusu.jpname = kmp.getTextContent();
-						} else {
-							kanmusu.jpname = kmp.getTextContent();
-							kanmusu.oname = kanmusu.jpname;
-						}
-						break;
-					case "craft":
-						kanmusu.setCraft(kmp.getTextContent());
-						break;
-					case "stats":
-						for (int k = 0; k<kmp.getChildNodes().getLength(); k++) {
-							if (kmp.getChildNodes().item(k).getNodeType() == Node.ELEMENT_NODE) {
-								Element kmpst = (Element) kmp.getChildNodes().item(k);
-								switch (kmpst.getNodeName()) {
-								case "fuel":
-									kanmusu.fuel = Integer.valueOf(kmpst.getTextContent());
-									break;
-								case "ammo":
-									kanmusu.ammo = Integer.valueOf(kmpst.getTextContent());
-									break;
-								case "slots":
-									kanmusu.slots = new int[Integer.valueOf(kmpst.getAttribute("count"))];
-									for (int l = 0; l < kmpst.getChildNodes().getLength(); l++) {
-										if (kmpst.getChildNodes().item(l).getNodeType() == Node.ELEMENT_NODE) {
-											Element kmsl = (Element) kmpst.getChildNodes().item(l);
-											if (kmsl.getNodeName() == "slot")
-												kanmusu.slots[Integer.valueOf(kmsl.getAttribute("id"))] = Integer.valueOf(kmsl.getTextContent());
-										}
-									}
-									break;
-								default:
-									break;
-								}
-							}
-						}
-						break;
-					case "remodel":
-						// TODO remodel system
-						break;
-					default:
-						break;
-					}
-				}
-			}
-			return kanmusu;
-			
+	public static Kanmusu getKanmusu(int id, ArrayList<Kanmusu> list) {
+		for (int i = 0; i<list.size(); i++) {
+			if (list.get(i).id == id)
+				return list.get(i);
 		}
 		return null;
 	}
@@ -222,7 +147,7 @@ public class Core {
 	}
 
 	public static String getPrice(int tries, Kanmusu kanmusu) {
-		if (kanmusu.craft == "unbuildable")
+		if (kanmusu.craft.equals("unbuildable"))
 			return kanmusu.craft;
 		int i = 0;
 		while (kanmusu.craft.charAt(i) != '/')

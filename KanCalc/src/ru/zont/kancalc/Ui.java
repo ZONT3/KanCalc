@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 import javax.swing.Box;
@@ -13,6 +14,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
+import javax.swing.JProgressBar;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
@@ -20,6 +22,10 @@ public class Ui {
 	static boolean connectErr = false;
 	
 	static private double farm_rankmult = 1;
+	
+	static JFrame frame_ccc = new JFrame("Validating crafts..");
+	static JProgressBar pb_ccc = new JProgressBar();
+	static JTextPane tp_ccc = new JTextPane();
 	
 	static JFrame frame_main = new JFrame("ChanceCalc v. " + Core.version);
 	static JButton bt_main_smuch = new JButton("SUM");
@@ -61,13 +67,12 @@ public class Ui {
 	static JComboBox<Object> cb_dc_nodes = new JComboBox<>(defaultMaps);
 	static JTextPane tp_dc_result = new JTextPane();
 	static JButton bt_dc_go = new JButton("GO");
+	//static JTextPane tp_dc_chance1 = new JTextPane();
 	
 	static eHandler listener = new eHandler();
 	static weHandler wlistener = new weHandler();
 
 	public static void init() {
-		
-		
 		frame_main.setLayout(new FlowLayout());
 		frame_main.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame_main.setSize(300, 130);
@@ -112,7 +117,7 @@ public class Ui {
 		tp_cc_price.setEditable(false);
 		bt_cc_go.addActionListener(listener);
 		cb_cc_ship.addActionListener(listener);
-		cb_cc_ship.setSelectedItem(Core.getKanmusu("Yuudachi"));
+		cb_cc_ship.setSelectedItem(Core.getKanmusu("Yuudachi", Core.kmlist));
 		Box cb1 = Box.createHorizontalBox();
 		cb1.add(Box.createHorizontalStrut(300));
 		cb1.add(cb_cc_ship);
@@ -192,10 +197,12 @@ public class Ui {
 		frame_dc.setSize(350, 150);
 		frame_dc.setResizable(false);
 		tp_dc_result.setEditable(false);
+		//tp_dc_chance1.setEditable(false);
 		bt_dc_go.addActionListener(listener);
 		cb_dc_maps.addActionListener(listener);
 		cb_dc_ship.addActionListener(listener);
-		cb_dc_ship.setSelectedItem(Core.getKanmusu("Yuudachi"));
+		//cb_dc_nodes.addActionListener(listener);
+		cb_dc_ship.setSelectedItem(Core.getKanmusu("Yuudachi", Core.kmlist));
 		Box dc1 = Box.createHorizontalBox();
 		dc1.add(Box.createHorizontalStrut(350));
 		dc1.add(cb_dc_ship);
@@ -208,23 +215,23 @@ public class Ui {
 		dc3.add(Box.createHorizontalStrut(350));
 		dc3.add(tf_dc_tries);
 		dc3.add(cb_dc_nodes);
+		//dc3.add(tp_dc_chance1);
 		dc3.add(Box.createHorizontalStrut(350));
 		Box dc4 = Box.createHorizontalBox();
 		dc4.add(Box.createHorizontalStrut(350));
-		dc4.add(tp_dc_result);
 		dc4.add(bt_dc_go);
+		dc4.add(tp_dc_result);
 		dc4.add(Box.createHorizontalStrut(350));
 		frame_dc.add(dc1);
 		frame_dc.add(dc2);
 		frame_dc.add(dc3);
 		frame_dc.add(dc4);
 	}
-
+	
 	static class eHandler implements ActionListener {
-
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			Kanmusu kanmusu = Core.getKanmusu("Yuudachi");
+			Kanmusu kanmusu = Core.getKanmusu("Yuudachi", Core.kmlist);
 			
 			if (e.getSource() == bt_go) {
 				try {
@@ -277,13 +284,14 @@ public class Ui {
 				}
 			} else if (e.getSource() == cb_cc_ship) {
 				kanmusu = (Kanmusu) cb_cc_ship.getSelectedItem();
-				tp_cc_craft.setText(kanmusu.craft);
+				tp_cc_craft.setText(kanmusu.craft+" "+kanmusu.getCraftchance()+"%");
 				if (kanmusu.craft == "unbuildable") {
 					tp_cc_price.setText("-----------");
 					tp_cc_chance.setText("-----------");
 				}
 			} else if (e.getSource() == cb_dc_ship) {
 				kanmusu = (Kanmusu) cb_dc_ship.getSelectedItem();
+				//cb_dc_nodes.removeActionListener(listener);
 				cb_dc_maps.removeAllItems();
 				try {
 					buildList(cb_dc_maps, kanmusu.getMaps());
@@ -299,16 +307,28 @@ public class Ui {
 				String map = (String) cb_dc_maps.getSelectedItem();
 				cb_dc_nodes.removeAllItems();
 				buildList(cb_dc_nodes, kanmusu.getNodes(map));
+				//cb_dc_nodes.addActionListener(listener);
 			} else if (e.getSource() == bt_dc_go) {
 				kanmusu = (Kanmusu) cb_dc_ship.getSelectedItem();
 				double res = Core.getSumChance(kanmusu.getDropChance(cb_dc_maps.getSelectedItem().toString(), 
 						cb_dc_nodes.getSelectedItem().toString()), Integer.valueOf(tf_dc_tries.getText()));
 				res = (Double)Math.rint(res*1000)/1000;
 				tp_dc_result.setText(res+"%");
+			} else if (e.getSource() == cb_dc_nodes) {
+				// Кто-то навел порчу, из-за чего это говно не хочет работать. Час пытался избавиться от нее, но бестолку
+//				Object map = cb_dc_maps.getSelectedItem();
+//				Object node = cb_dc_nodes.getSelectedItem();
+//				if (node != null)
+//					tp_dc_chance1.setText(kanmusu.getDropChance(map.toString(), node.toString())+"%");
 			}
 		}
 
-		private void buildList(JComboBox<Object> list, Object[] content) {
+		private void buildList(JComboBox<Object> list, ArrayList<String> contentList) {
+			if (contentList.size() == 0) {
+				list.addItem("---");
+				return;
+			}
+			Object[] content = contentList.toArray();
 			Arrays.sort(content);
 			for (int i = 0; i < content.length; i++)
 				list.addItem(content[i]);
@@ -346,5 +366,37 @@ public class Ui {
 	
 	public static void err(String message, String title) {
 		JOptionPane.showMessageDialog(null, message, title, JOptionPane.ERROR_MESSAGE);
+	}
+
+	public static void CCCi() {
+		frame_ccc.setLayout(new FlowLayout());
+		frame_ccc.setSize(300, 130);
+		frame_ccc.setVisible(true);
+		frame_ccc.setResizable(false);
+		frame_ccc.setLocationRelativeTo(null);
+		tp_ccc.setEditable(false);
+		pb_ccc.setMinimum(0);
+		pb_ccc.setMaximum(2);
+		pb_ccc.setValue(0);
+		Box b1 = Box.createHorizontalBox();
+		b1.add(Box.createHorizontalStrut(200));
+		b1.add(pb_ccc);
+		b1.add(Box.createHorizontalStrut(200));
+		Box b2 = Box.createHorizontalBox();
+		b2.add(Box.createHorizontalStrut(200));
+		b2.add(tp_ccc);
+		b2.add(Box.createHorizontalStrut(200));
+		frame_ccc.add(b1);
+		frame_ccc.add(b2);
+	}
+
+	public static void CCCc(int total, int index, String status) {
+		pb_ccc.setMaximum(total-1);
+		pb_ccc.setValue(index);
+		tp_ccc.setText(status);
+	}
+
+	public static void CCCe() {
+		frame_ccc.setVisible(false);
 	}
 }

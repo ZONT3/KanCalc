@@ -11,18 +11,21 @@ public class KCDB {
 	
 	public static double getCC(Kanmusu kanmusu) {
 		double res = -1;
-		System.out.println("Getting CH for "+kanmusu+" ID:"+kanmusu.id+" C:"+kanmusu.craft);
+		System.out.println("Getting CC for "+kanmusu+" ID:"+kanmusu.id+" C:"+kanmusu.craft);
 		try {
 			org.jsoup.nodes.Document inf = Jsoup.connect("http://kancolle-db.net/ship/"+kanmusu.id+".html").get();
 			org.jsoup.select.Elements tr = inf.getElementsByTag("tr");
 			for (int i=0; i<tr.size(); i++) {
-				if (tr.get(i).getElementsByAttributeValue("class", "ship").size()>0)
-					if (tr.get(i).getElementsByAttributeValue("class", "ship").get(0).text().equals(kanmusu.craft))
-						for (int j=0; j<tr.get(i).childNodeSize(); j++)
-							if (tr.get(i).getElementsContainingText("%").size()>0)
+				if (tr.get(i).getElementsByAttributeValue("class", "ship").size()>0) {
+					if (tr.get(i).getElementsByAttributeValue("class", "ship").get(0).text().equals(kanmusu.craft)) {
+						for (int j=0; j<tr.get(i).childNodeSize(); j++) 
+							if (tr.get(i).getElementsContainingText("%").size()>0) 
 								res = Double.valueOf(tr.get(i).getElementsContainingText("%").get(1).text().substring
 										(0, tr.get(i).getElementsContainingText("%").get(1).text().length()-1));
-				
+					}
+				} else if (kanmusu.craft.equals("unbuildable")) {
+					res = 0;
+				}	
 			}
 			if (res == -1)
 				Ui.err("Chance of craft "+kanmusu+" hasn't found for native reciepe, defined in kanmusuList.xml ("+

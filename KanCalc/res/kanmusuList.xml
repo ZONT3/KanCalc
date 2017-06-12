@@ -976,7 +976,7 @@
 		<nid>19</nid>
 		<name>Ooi</name>
 		<nameJP>大井</nameJP>
-		<craft>250/130/200/30</craft>
+		<craft>270/130/330/30</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -3607,7 +3607,7 @@
 		<nid>60</nid>
 		<name>Atago</name>
 		<nameJP>愛宕</nameJP>
-		<craft>250/130/200/30</craft>
+		<craft>400/30/600/30</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -4408,7 +4408,7 @@
 		<nid>1</nid>
 		<name>Nagato</name>
 		<nameJP>長門</nameJP>
-		<craft>400/100/600/30</craft>
+		<craft>4000/7000/7000/2000</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -4592,7 +4592,7 @@
 		<nid>7</nid>
 		<name>Kaga</name>
 		<nameJP>加賀</nameJP>
-		<craft>300/30/400/300</craft>
+		<craft>300/300/600/600</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -4980,7 +4980,7 @@
 		<nid>9</nid>
 		<name>Hiryuu</name>
 		<nameJP>飛龍</nameJP>
-		<craft>300/30/400/300</craft>
+		<craft>350/30/600/350</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -5704,12 +5704,12 @@
 
 	<comm>====================================================================ЗДЕСЬ====БЛЯТЬ====================================</comm>
 
-	<ship type="CL">
+	<ship type="CL" class="Agano">
 		<id>137</id>
 		<nid>137</nid>
 		<name>Agano</name>
 		<nameJP>阿賀野</nameJP>
-		<craft>lsc</craft>
+		<craft>3500/4500/4500/2000</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -5755,12 +5755,12 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CL">
+	<ship type="CL" class="Agano">
 		<id>138</id>
 		<nid>138</nid>
 		<name>Noshiro</name>
 		<nameJP>能代</nameJP>
-		<craft>lsc</craft>
+		<craft>1500/1500/2000/1000</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -5806,12 +5806,12 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CL">
+	<ship type="CL" class="Agano">
 		<id>139</id>
 		<nid>139</nid>
 		<name>Yahagi</name>
 		<nameJP>矢矧</nameJP>
-		<craft>lsc</craft>
+		<craft>1500/1500/2000/1000</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -5857,12 +5857,12 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CL">
+	<ship type="CL" class="Agano">
 		<id>140</id>
 		<nid>140</nid>
 		<name>Sakawa</name>
 		<nameJP>酒匂</nameJP>
-		<craft>lsc</craft>
+		<craft>unbuildable</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -5908,7 +5908,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="BB">
+	<ship type="BB" class="Yamato">
 		<id>143</id>
 		<nid>143</nid>
 		<name>Musashi</name>
@@ -5961,7 +5961,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CVB">
+	<ship type="CVB" class="Taihou">
 		<id>153</id>
 		<nid>153</nid>
 		<name>Taihou</name>
@@ -6014,12 +6014,12 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CT">
+	<ship type="CT" class="Katori">
 		<id>154</id>
 		<nid>154</nid>
 		<name>Katori</name>
 		<nameJP>香取</nameJP>
-		<craft>?</craft>
+		<craft>270/130/330/30</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
@@ -6064,6 +6064,112 @@
 			<ammo>30</ammo>
 			<suffix>Kai</suffix>
 			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+
+
+
+	<ship type="FBB" class="Bismarck">
+		<id>171</id>
+		<nid>171</nid>
+		<name>Bismarck</name>
+		<nameJP>ビスマルク</nameJP>
+		<craft>4000/6000/7000/2000</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="4">
+				<slot id="0">4</slot>
+				<slot id="1">4</slot>
+				<slot id="2">4</slot>
+				<slot id="3">4</slot>
+			</slots>
+			<fuel>90</fuel>
+			<ammo>110</ammo>
+		</stats>
+		<remodel index="1" lvl="30">
+			<id>172</id>
+			<nid>172</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="4">
+				<slot id="0">4</slot>
+				<slot id="1">4</slot>
+				<slot id="2">4</slot>
+				<slot id="3">4</slot>
+			</slots>
+			<fuel>95</fuel>
+			<ammo>115</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+		<remodel index="2" lvl="50">
+			<id>173</id>
+			<nid>173</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="4">
+				<slot id="0">4</slot>
+				<slot id="1">4</slot>
+				<slot id="2">4</slot>
+				<slot id="3">4</slot>
+			</slots>
+			<fuel>105</fuel>
+			<ammo>135</ammo>
+			<suffix>Zwei</suffix>
+			<suffixJP>ツワイ</suffixJP>
+		</remodel>
+		<remodel index="3" lvl="75">
+			<id>178</id>
+			<nid>178</nid>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="4">
+				<slot id="0">4</slot>
+				<slot id="1">4</slot>
+				<slot id="2">4</slot>
+				<slot id="3">4</slot>
+			</slots>
+			<fuel>110</fuel>
+			<ammo>155</ammo>
+			<suffix>Drei</suffix>
+			<suffixJP>ヅライ</suffixJP>
 		</remodel>
 	</ship>
 </ships>

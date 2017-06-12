@@ -58,7 +58,7 @@ public class Kanmusu {
 		return craftchance;
 	}
 
-	public Object[] getMaps() throws IOException {
+	public ArrayList<String> getMaps() throws IOException {
 		if (!gotDrops) {
 			drops = KCDB.getDrops(this);
 			gotDrops = true;
@@ -73,16 +73,16 @@ public class Kanmusu {
 			if (!was)
 				res.add(map);
 		}
-		return res.toArray();
+		return res;
 	}
 
-	public Object[] getNodes(String map) {
+	public ArrayList<String> getNodes(String map) {
 		ArrayList<String> res = new ArrayList<>();
 		for (int i=0; i<drops.size(); i++)
 			if (drops.get(i).name.equals(map))
 				for (int j=0; j<drops.get(i).nodes.size(); j++)
 					res.add(drops.get(i).nodes.get(j).name);
-		return res.toArray();
+		return res;
 	}
 
 	public double getDropChance(String map, String node) {
