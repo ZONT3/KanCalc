@@ -9,31 +9,31 @@ import org.jsoup.select.Elements;
 
 public class KCDB {
 	
-	public static double getCC(Kanmusu kanmusu) {
+	public static double getCC(Kanmusu kanmusu, String craft) {
 		double res = -1;
-		System.out.println("Getting CC for "+kanmusu+" ID:"+kanmusu.id+" C:"+kanmusu.craft);
+		System.out.println("Getting CC for "+kanmusu+" ID:"+kanmusu.id+" C:"+craft);
 		try {
 			org.jsoup.nodes.Document inf = Jsoup.connect("http://kancolle-db.net/ship/"+kanmusu.id+".html").get();
 			org.jsoup.select.Elements tr = inf.getElementsByTag("tr");
 			for (int i=0; i<tr.size(); i++) {
 				if (tr.get(i).getElementsByAttributeValue("class", "ship").size()>0) {
-					if (tr.get(i).getElementsByAttributeValue("class", "ship").get(0).text().equals(kanmusu.craft)) {
+					if (tr.get(i).getElementsByAttributeValue("class", "ship").get(0).text().equals(craft)) {
 						for (int j=0; j<tr.get(i).childNodeSize(); j++) 
 							if (tr.get(i).getElementsContainingText("%").size()>0) 
 								res = Double.valueOf(tr.get(i).getElementsContainingText("%").get(1).text().substring
 										(0, tr.get(i).getElementsContainingText("%").get(1).text().length()-1));
 					}
-				} else if (kanmusu.craft.equals("unbuildable")) {
+				} else if (craft.equals("unbuildable")) {
 					res = 0;
 				}	
 			}
 			if (res == -1)
 				Ui.err("Chance of craft "+kanmusu+" hasn't found for native reciepe, defined in kanmusuList.xml ("+
-						kanmusu.craft+ ")\nPlease contact developers to fix it.", "ERROR");
+						craft+ ")\nPlease contact developers to fix it.", "ERROR");
 		} catch (IOException e) {
 			Ui.err(e.getMessage(), "ERROR WITH COMMUNICATING KCDB");
 		}
-		System.out.println(res+"%");
+		System.out.println(res+"%\n");
 		return res;
 	}
 
@@ -59,6 +59,48 @@ public class KCDB {
 				res.get(Core.mapPresent(drop, res)).nodes.add(node);
 			}
 		}
+		System.out.println();
+		return res;
+	}
+	
+	public static ArrayList<Kanmusu> getCraftDrops(String craft) {
+		ArrayList<Kanmusu> res = new ArrayList<>();
+		System.out.println("Getting CraftDrops for "+craft);
+		Document doc;
+		try {
+			doc = Jsoup.connect("http://kancolle-db.net/ship/"+craft.replace('/', '-')+".html").get();
+		} catch (IOException e) {
+			Ui.err(e.getMessage()+"\n\nMaybe, you're trying to find unexisting craft?", "ERROR WITH COMMUNICATING KCDB");
+			return null;
+		}
+		Elements tr = doc.getElementsByTag("tr");
+		for (int i=0; i<tr.size(); i++) {
+			if (tr.get(i).getElementsByAttributeValue("class", "ship").size()==1) {
+				String name = tr.get(i).getElementsByAttributeValue("class", "ship").text();
+				int id = Integer.valueOf(tr.get(i).getElementsByAttributeValue("class", "ship").attr("id"));
+				Kanmusu kanmusu = Core.getKanmusu(id, Core.kmlist);
+				if (kanmusu == null) {
+					Ui.err("Listed kanmusu \""+name+"\" (ID"+id+") hadn't defined in our db. Sorry, this isn't release already", "WARNING");
+					kanmusu = new Kanmusu("??");
+					kanmusu.jpname = name;
+					kanmusu.oname = name;
+					kanmusu.name = "ID"+id;
+					kanmusu.id = id;
+				}
+				Kanmusu.Craft ncr = new Kanmusu.Craft();
+				if (tr.get(i).getElementsContainingText("%").size()>=1) {
+					ncr.reciepe = craft;
+					ncr.chance = Double.valueOf(tr.get(i).getElementsContainingText("%").get(1).text().substring
+							(0, tr.get(i).getElementsContainingText("%").get(1).text().length()-1));
+				}
+				if (tr.get(i).getElementsByTag("td").size()>0)
+					ncr.entries = Integer.valueOf(tr.get(i).getElementsByTag("td").get(1).text());
+				System.out.println("SID:"+id+" SN:\""+name+"\" C:"+ncr.chance+" E:"+ncr.entries);
+				kanmusu.crafts.add(ncr);
+				res.add(kanmusu);
+			}
+		}
+		System.out.println();
 		return res;
 	}
 }

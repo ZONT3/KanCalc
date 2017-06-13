@@ -14,6 +14,7 @@ public class Kanmusu {
 	boolean gotDrops = false;
 	ArrayList<Map> drops = new ArrayList<>();
 	int nextlevel;
+	ArrayList<Craft> crafts = new ArrayList<>();
 
 	int index;
 	int nid;
@@ -36,6 +37,12 @@ public class Kanmusu {
 			double chance;
 		}
 	}
+	
+	public static class Craft {
+		String reciepe = "0/0/0/0";
+		double chance = 0;
+		int entries = -1;
+	}
 
 	@Override
 	public String toString() {
@@ -46,6 +53,12 @@ public class Kanmusu {
 		this.craft = craft;
 	}
 	
+	public Craft getCraft(String craft) {
+		for (int i=0; i<crafts.size(); i++)
+			if (craft.equals(crafts.get(i).reciepe))
+				return crafts.get(i);
+		return new Craft();
+	}
 
 	public double getCraftchance() {
 		if (craftchance >= 0)
@@ -54,7 +67,7 @@ public class Kanmusu {
 			craftchance = 0;
 			return 0;
 		}
-		craftchance = KCDB.getCC(this);
+		craftchance = KCDB.getCC(this, craft);
 		return craftchance;
 	}
 

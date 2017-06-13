@@ -20,188 +20,201 @@ import javax.swing.JTextPane;
 
 public class Ui {
 	static boolean connectErr = false;
-	
+
 	static private double farm_rankmult = 1;
-	
-	static JFrame frame_ccc = new JFrame("Validating crafts..");
-	static JProgressBar pb_ccc = new JProgressBar();
-	static JTextPane tp_ccc = new JTextPane();
-	
-	static JFrame frame_main = new JFrame("ChanceCalc v. " + Core.version);
-	static JButton bt_main_smuch = new JButton("SUM");
-	static JButton bt_main_farm = new JButton("XP Farm");
-	static JButton bt_main_cc = new JButton("Craft Chance");
-	static JButton bt_main_dc = new JButton("Drop Chance");
+
+	static JFrame ccc_frame = new JFrame("Validating crafts..");
+	static JProgressBar ccc_pb = new JProgressBar();
+	static JTextPane ccc_tp_ = new JTextPane();
+
+	static JFrame main_frame = new JFrame("ChanceCalc v." + Core.version);
+	static JButton main_bt_smuch = new JButton("SUM");
+	static JButton main_farm_bt = new JButton("XP Farm");
+	static JButton main_bt_cc = new JButton("Craft Chance");
+	static JButton main_bt_dc = new JButton("Drop Chance");
+	static JButton main_bt_ci = new JButton("Craft Droplist");
 	static JTextPane tp_newver = new JTextPane();
-	
-	static JFrame frame_sumch = new JFrame("SUM chance");
-	static JTextField tf_tries = new JTextField("tries..");
-	static JTextField tf_chance = new JTextField("50");
-	static JTextPane tp_prec = new JTextPane();
-	static JButton bt_go = new JButton("GO");
-	static JTextPane tp_result = new JTextPane();
-	
-	static JFrame frame_cc = new JFrame("Chance of craft");
-	static JComboBox<Object> cb_cc_ship = new JComboBox<>(Core.kmlist.toArray());
-	static JTextField tf_cc_tries = new JTextField("Tries");
-	static JTextPane tp_cc_craft = new JTextPane();
-	static JButton bt_cc_go = new JButton("GO");
-	static JTextPane tp_cc_price = new JTextPane();
-	static JTextPane tp_cc_chance = new JTextPane();
-	
-	static String[] ranks = {"S", "A", "B", "C", "D"};
-	static JFrame frame_farm = new JFrame("FarmCalc");
-	static JButton bt_farm_go = new JButton("GO");
-	static JTextField tf_farm_lvls = new JTextField("1-75");
-	static JTextField tf_farm_basexp = new JTextField("320");
+
+	static JFrame sumch_frame = new JFrame("SUM chance");
+	static JTextField sumch_tf_tries = new JTextField("tries..");
+	static JTextField sumch_tf_chance = new JTextField("50");
+	static JTextPane sumch_tp_prec = new JTextPane();
+	static JButton sumch_bt_go = new JButton("GO");
+	static JTextPane sumch_tp_result = new JTextPane();
+
+	static JFrame cc_frame = new JFrame("Chance of craft");
+	static JComboBox<Object> cc_cb_ship = new JComboBox<>(Core.kmlist.toArray());
+	static JTextField cc_tf_tries = new JTextField("Tries");
+	static JTextPane cc_tp_craft = new JTextPane();
+	static JButton cc_bt_go = new JButton("GO");
+	static JTextPane cc_tp_price = new JTextPane();
+	static JTextPane cc_tp_chance = new JTextPane();
+
+	static String[] ranks = { "S", "A", "B", "C", "D" };
+	static JFrame farm_frame = new JFrame("FarmCalc");
+	static JButton farm_bt_go = new JButton("GO");
+	static JTextField farm_tf_lvls = new JTextField("1-75");
+	static JTextField farm_tf_basexp = new JTextField("320");
 	static JComboBox<String> mb_farm_rank = new JComboBox<>(ranks);
-	static JTextField tf_farm_cons_t = new JTextField("20");
-	static JTextField tf_farm_cons_a = new JTextField("30");
-	static JTextPane tp_farm_result = new JTextPane();
-	
-	static String[] defaultMaps = {"---"};
-	static JFrame frame_dc = new JFrame("Chance of drop");
+	static JTextField farm_tf_cons_t = new JTextField("20");
+	static JTextField farm_tf_cons_a = new JTextField("30");
+	static JTextPane farm_tp_result = new JTextPane();
+
+	static String[] defaultMaps = { "---" };
+	static JFrame dc_frame = new JFrame("Chance of drop");
 	static JComboBox<Object> cb_dc_ship = new JComboBox<>(Core.kmlist.toArray());
 	static JTextField tf_dc_tries = new JTextField("Tries");
 	static JComboBox<Object> cb_dc_maps = new JComboBox<>(defaultMaps);
 	static JComboBox<Object> cb_dc_nodes = new JComboBox<>(defaultMaps);
-	static JTextPane tp_dc_result = new JTextPane();
-	static JButton bt_dc_go = new JButton("GO");
-	//static JTextPane tp_dc_chance1 = new JTextPane();
-	
+	static JTextPane dc_tp_result = new JTextPane();
+	static JButton dc_bt_go = new JButton("GO");
+	// static JTextPane dc_tp_chance1 = new JTextPane();
+
+	static JFrame ci_frame = new JFrame("Craft Droplst");
+	static JTextField ci_tf_fuel = new JTextField(3);
+	static JTextField ci_tf_ammo = new JTextField(3);
+	static JTextField ci_tf_steel = new JTextField(3);
+	static JTextField ci_tf_boux = new JTextField(3);
+	static JComboBox<Object> ci_cb_result = new JComboBox<>();
+	static JTextPane ci_tp_chance = new JTextPane();
+	static JButton ci_bt_go = new JButton("GO");
+
 	static eHandler listener = new eHandler();
 	static weHandler wlistener = new weHandler();
 
 	public static void init() {
-		frame_main.setLayout(new FlowLayout());
-		frame_main.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame_main.setSize(300, 130);
-		frame_main.setResizable(false);
-		frame_main.setVisible(true);
-		frame_main.setLocationRelativeTo(null);
-		bt_main_smuch.addActionListener(listener);
-		bt_main_cc.addActionListener(listener);
-		bt_main_farm.addActionListener(listener);
-		bt_main_dc.addActionListener(listener);
-		bt_main_cc.setEnabled(false);
-		bt_main_dc.setEnabled(false);
+		main_frame.setLayout(new FlowLayout());
+		main_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		main_frame.setSize(400, 130);
+		main_frame.setResizable(false);
+		main_frame.setVisible(true);
+		main_frame.setLocationRelativeTo(null);
+		main_bt_smuch.addActionListener(listener);
+		main_bt_cc.addActionListener(listener);
+		main_farm_bt.addActionListener(listener);
+		main_bt_dc.addActionListener(listener);
+		main_bt_ci.addActionListener(listener);
+		main_bt_cc.setEnabled(false);
+		main_bt_dc.setEnabled(false);
+		main_bt_ci.setEnabled(false);
 		tp_newver.setText("Connecting...");
 		tp_newver.setEditable(false);
-		
+
 		Box b11 = Box.createHorizontalBox();
-		b11.add(Box.createHorizontalStrut(150));
-		b11.add(bt_main_smuch);
-		b11.add(bt_main_farm);
-		b11.add(Box.createHorizontalStrut(150));
+		b11.add(Box.createHorizontalStrut(300));
+		b11.add(main_bt_smuch);
+		b11.add(main_farm_bt);
+		b11.add(Box.createHorizontalStrut(300));
 		Box b12 = Box.createHorizontalBox();
-		b12.add(Box.createHorizontalStrut(150));
-		b12.add(bt_main_cc);
-		b12.add(bt_main_dc);
-		b12.add(Box.createHorizontalStrut(150));
+		b12.add(Box.createHorizontalStrut(300));
+		b12.add(main_bt_cc);
+		b12.add(main_bt_dc);
+		b12.add(main_bt_ci);
+		b12.add(Box.createHorizontalStrut(300));
 		Box b13 = Box.createHorizontalBox();
-		b13.add(Box.createHorizontalStrut(150));
+		b13.add(Box.createHorizontalStrut(300));
 		b13.add(tp_newver);
-		b13.add(Box.createHorizontalStrut(150));
-		frame_main.add(b11);
-		frame_main.add(b12);
-		frame_main.add(b13);
-		
-		//---------------------------------------CC
-		frame_cc.setLayout(new FlowLayout());
-		frame_cc.addWindowListener(wlistener);
-		frame_cc.setSize(450, 130);
-		frame_cc.setResizable(false);
-		tp_result.setEditable(false);
-		tp_cc_craft.setEditable(false);
-		tp_cc_chance.setEditable(false);
-		tp_cc_price.setEditable(false);
-		bt_cc_go.addActionListener(listener);
-		cb_cc_ship.addActionListener(listener);
-		cb_cc_ship.setSelectedItem(Core.getKanmusu("Yuudachi", Core.kmlist));
+		b13.add(Box.createHorizontalStrut(300));
+		main_frame.add(b11);
+		main_frame.add(b12);
+		main_frame.add(b13);
+
+		// ---------------------------------------CC
+		cc_frame.setLayout(new FlowLayout());
+		cc_frame.addWindowListener(wlistener);
+		cc_frame.setSize(450, 130);
+		cc_frame.setResizable(false);
+		sumch_tp_result.setEditable(false);
+		cc_tp_craft.setEditable(false);
+		cc_tp_chance.setEditable(false);
+		cc_tp_price.setEditable(false);
+		cc_bt_go.addActionListener(listener);
+		cc_cb_ship.addActionListener(listener);
+		cc_cb_ship.setSelectedItem(Core.getKanmusu("Yuudachi", Core.kmlist));
 		Box cb1 = Box.createHorizontalBox();
 		cb1.add(Box.createHorizontalStrut(300));
-		cb1.add(cb_cc_ship);
-		cb1.add(Box.createHorizontalStrut(300));		
+		cb1.add(cc_cb_ship);
+		cb1.add(Box.createHorizontalStrut(300));
 		Box cb2 = Box.createHorizontalBox();
 		cb2.add(Box.createHorizontalStrut(300));
-		cb2.add(tf_cc_tries);
-		cb2.add(tp_cc_craft);
+		cb2.add(cc_tf_tries);
+		cb2.add(cc_tp_craft);
 		cb2.add(Box.createHorizontalStrut(300));
 		Box cb3 = Box.createHorizontalBox();
 		cb3.add(Box.createHorizontalStrut(300));
-		cb3.add(bt_cc_go);
-		cb3.add(tp_cc_chance);
-		cb3.add(tp_cc_price);
+		cb3.add(cc_bt_go);
+		cb3.add(cc_tp_chance);
+		cb3.add(cc_tp_price);
 		cb3.add(Box.createHorizontalStrut(300));
-		frame_cc.add(cb1);
-		frame_cc.add(cb2);
-		frame_cc.add(cb3);
-		
-		//-----------------------------------FARM
-		frame_farm.setLayout(new FlowLayout());
-		frame_farm.addWindowListener(wlistener);
-		frame_farm.setSize(300, 140);
-		frame_farm.setResizable(false);
-		bt_farm_go.addActionListener(listener);
-		tp_farm_result.setEditable(false);
+		cc_frame.add(cb1);
+		cc_frame.add(cb2);
+		cc_frame.add(cb3);
+
+		// -----------------------------------FARM
+		farm_frame.setLayout(new FlowLayout());
+		farm_frame.addWindowListener(wlistener);
+		farm_frame.setSize(300, 140);
+		farm_frame.setResizable(false);
+		farm_bt_go.addActionListener(listener);
+		farm_tp_result.setEditable(false);
 		Box fb1 = Box.createHorizontalBox();
 		fb1.add(Box.createHorizontalStrut(150));
-		fb1.add(tf_farm_lvls);
-		fb1.add(tf_farm_basexp);
+		fb1.add(farm_tf_lvls);
+		fb1.add(farm_tf_basexp);
 		fb1.add(mb_farm_rank);
 		fb1.add(Box.createHorizontalStrut(150));
 		Box fb2 = Box.createHorizontalBox();
 		fb2.add(Box.createHorizontalStrut(150));
-		fb2.add(bt_farm_go);
-		fb2.add(tp_farm_result);
+		fb2.add(farm_bt_go);
+		fb2.add(farm_tp_result);
 		fb2.add(Box.createHorizontalStrut(150));
 		Box fb3 = Box.createHorizontalBox();
 		fb3.add(Box.createHorizontalStrut(150));
-		fb3.add(tf_farm_cons_t);
-		fb3.add(tf_farm_cons_a);
+		fb3.add(farm_tf_cons_t);
+		fb3.add(farm_tf_cons_a);
 		fb3.add(Box.createHorizontalStrut(150));
-		frame_farm.add(fb1);
-		frame_farm.add(fb3);
-		frame_farm.add(fb2);
-		
-		//---------------------------------------SMUCH
-		frame_sumch.setLayout(new FlowLayout());
-		frame_sumch.addWindowListener(wlistener);
-		frame_sumch.setSize(300, 130);
-		frame_sumch.setResizable(false);
-		tp_prec.setText("%");
-		tp_prec.setEditable(false);
+		farm_frame.add(fb1);
+		farm_frame.add(fb3);
+		farm_frame.add(fb2);
+
+		// ---------------------------------------SMUCH
+		sumch_frame.setLayout(new FlowLayout());
+		sumch_frame.addWindowListener(wlistener);
+		sumch_frame.setSize(300, 130);
+		sumch_frame.setResizable(false);
+		sumch_tp_prec.setText("%");
+		sumch_tp_prec.setEditable(false);
 		Box b1 = Box.createHorizontalBox();
 		b1.add(Box.createHorizontalStrut(150));
-		b1.add(tf_chance);
-		b1.add(tp_prec);
+		b1.add(sumch_tf_chance);
+		b1.add(sumch_tp_prec);
 		b1.add(Box.createHorizontalStrut(150));
 		Box b2 = Box.createHorizontalBox();
 		b2.add(Box.createHorizontalStrut(150));
-		b2.add(tf_tries);
+		b2.add(sumch_tf_tries);
 		b2.add(Box.createHorizontalStrut(150));
 		Box b3 = Box.createHorizontalBox();
 		b3.add(Box.createHorizontalStrut(150));
-		b3.add(bt_go);
+		b3.add(sumch_bt_go);
 		b3.add(Box.createHorizontalStrut(5));
-		b3.add(tp_result);
+		b3.add(sumch_tp_result);
 		b3.add(Box.createHorizontalStrut(150));
-		bt_go.addActionListener(listener);
-		frame_sumch.add(b1);
-		frame_sumch.add(b2);
-		frame_sumch.add(b3);
-		
-		//---------------------------------------------DC
-		frame_dc.setLayout(new FlowLayout());
-		frame_dc.addWindowListener(wlistener);
-		frame_dc.setSize(350, 150);
-		frame_dc.setResizable(false);
-		tp_dc_result.setEditable(false);
-		//tp_dc_chance1.setEditable(false);
-		bt_dc_go.addActionListener(listener);
+		sumch_bt_go.addActionListener(listener);
+		sumch_frame.add(b1);
+		sumch_frame.add(b2);
+		sumch_frame.add(b3);
+
+		// ---------------------------------------------DC
+		dc_frame.setLayout(new FlowLayout());
+		dc_frame.addWindowListener(wlistener);
+		dc_frame.setSize(350, 150);
+		dc_frame.setResizable(false);
+		dc_tp_result.setEditable(false);
+		// dc_tp_chance1.setEditable(false);
+		dc_bt_go.addActionListener(listener);
 		cb_dc_maps.addActionListener(listener);
 		cb_dc_ship.addActionListener(listener);
-		//cb_dc_nodes.addActionListener(listener);
+		// cb_dc_nodes.addActionListener(listener);
 		cb_dc_ship.setSelectedItem(Core.getKanmusu("Yuudachi", Core.kmlist));
 		Box dc1 = Box.createHorizontalBox();
 		dc1.add(Box.createHorizontalStrut(350));
@@ -215,44 +228,81 @@ public class Ui {
 		dc3.add(Box.createHorizontalStrut(350));
 		dc3.add(tf_dc_tries);
 		dc3.add(cb_dc_nodes);
-		//dc3.add(tp_dc_chance1);
+		// dc3.add(dc_tp_chance1);
 		dc3.add(Box.createHorizontalStrut(350));
 		Box dc4 = Box.createHorizontalBox();
 		dc4.add(Box.createHorizontalStrut(350));
-		dc4.add(bt_dc_go);
-		dc4.add(tp_dc_result);
+		dc4.add(dc_bt_go);
+		dc4.add(dc_tp_result);
 		dc4.add(Box.createHorizontalStrut(350));
-		frame_dc.add(dc1);
-		frame_dc.add(dc2);
-		frame_dc.add(dc3);
-		frame_dc.add(dc4);
+		dc_frame.add(dc1);
+		dc_frame.add(dc2);
+		dc_frame.add(dc3);
+		dc_frame.add(dc4);
+		
+		//-------------------------------------------CI
+		ci_frame.setLayout(new FlowLayout());
+		ci_frame.addWindowListener(wlistener);
+		ci_frame.setSize(350, 150);
+		ci_frame.setResizable(false);
+		ci_tp_chance.setEditable(false);
+		ci_cb_result.addActionListener(listener);
+		ci_bt_go.addActionListener(listener);
+		Box ci1 = Box.createHorizontalBox();
+		ci1.add(Box.createHorizontalStrut(350));
+		ci1.add(ci_tf_fuel);
+		ci1.add(ci_tf_steel);
+		ci1.add(Box.createHorizontalStrut(350));		
+		Box ci2 = Box.createHorizontalBox();
+		ci2.add(Box.createHorizontalStrut(350));
+		ci2.add(ci_tf_ammo);
+		ci2.add(ci_tf_boux);
+		ci2.add(Box.createHorizontalStrut(350));		
+		Box ci3 = Box.createHorizontalBox();
+		ci3.add(Box.createHorizontalStrut(350));
+		ci3.add(ci_bt_go);
+		ci3.add(ci_tp_chance);
+		ci3.add(Box.createHorizontalStrut(350));		
+		Box ci4 = Box.createHorizontalBox();
+		ci4.add(Box.createHorizontalStrut(350));
+		ci4.add(ci_cb_result);
+		ci4.add(Box.createHorizontalStrut(350));
+		ci_frame.add(ci1);
+		ci_frame.add(ci2);
+		ci_frame.add(ci3);
+		ci_frame.add(ci4);
+		
 	}
-	
+
 	static class eHandler implements ActionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			Kanmusu kanmusu = Core.getKanmusu("Yuudachi", Core.kmlist);
-			
-			if (e.getSource() == bt_go) {
+
+			if (e.getSource() == sumch_bt_go) {
 				try {
-					tp_result.setText((int)Core.getSumChance(Integer.parseInt(tf_chance.getText()), Integer.parseInt(tf_tries.getText()))+"%");
-				} catch(Exception er) {
+					sumch_tp_result.setText((int) Core.getSumChance(Integer.parseInt(sumch_tf_chance.getText()),
+							Integer.parseInt(sumch_tf_tries.getText())) + "%");
+				} catch (Exception er) {
 					JOptionPane.showMessageDialog(null, er, "Error", JOptionPane.ERROR_MESSAGE);
 				}
-			} else if (e.getSource() == bt_main_smuch || e.getSource() == bt_main_cc || e.getSource() == bt_main_farm || e.getSource() == bt_main_dc) {
+			} else if (e.getSource() == main_bt_smuch || e.getSource() == main_bt_cc || e.getSource() == main_farm_bt
+					|| e.getSource() == main_bt_dc || e.getSource() == main_bt_ci) {
 				JFrame frame = null;
-				if (e.getSource() == bt_main_smuch)
-					frame = frame_sumch;
-				else if (e.getSource() == bt_main_cc)
-					frame = frame_cc;
-				else if (e.getSource() == bt_main_farm)
-					frame = frame_farm;
-				else if (e.getSource() == bt_main_dc)
-					frame = frame_dc;
-				frame.setLocation(frame_main.getLocation());
-				frame_main.setVisible(false);
+				if (e.getSource() == main_bt_smuch)
+					frame = sumch_frame;
+				else if (e.getSource() == main_bt_cc)
+					frame = cc_frame;
+				else if (e.getSource() == main_farm_bt)
+					frame = farm_frame;
+				else if (e.getSource() == main_bt_dc)
+					frame = dc_frame;
+				else if (e.getSource() == main_bt_ci)
+					frame = ci_frame;
+				frame.setLocation(main_frame.getLocation());
+				main_frame.setVisible(false);
 				frame.setVisible(true);
-			} else if (e.getSource() == bt_farm_go) {
+			} else if (e.getSource() == farm_bt_go) {
 				switch (mb_farm_rank.getSelectedIndex()) {
 				case 0:
 					farm_rankmult = 1.2;
@@ -272,26 +322,29 @@ public class Ui {
 				default:
 					break;
 				}
-				int sts = Core.getSortiresLeft(tf_farm_lvls.getText(), Integer.parseInt(tf_farm_basexp.getText()), farm_rankmult);
-				tp_farm_result.setText(sts+"sts; "+sts*Integer.parseInt(tf_farm_cons_t.getText())+"/"+sts*Integer.parseInt(tf_farm_cons_a.getText())+" F/A");
-			} else if (e.getSource() == bt_cc_go) {
-				kanmusu = (Kanmusu) cb_cc_ship.getSelectedItem();
+				int sts = Core.getSortiresLeft(farm_tf_lvls.getText(), Integer.parseInt(farm_tf_basexp.getText()),
+						farm_rankmult);
+				farm_tp_result.setText(sts + "sts; " + sts * Integer.parseInt(farm_tf_cons_t.getText()) + "/"
+						+ sts * Integer.parseInt(farm_tf_cons_a.getText()) + " F/A");
+			} else if (e.getSource() == cc_bt_go) {
+				kanmusu = (Kanmusu) cc_cb_ship.getSelectedItem();
 				if (kanmusu.craft != "unbuildable") {
-					double chance = Core.getSumChance(kanmusu.getCraftchance(), Integer.parseInt(tf_cc_tries.getText()));
-					chance = (double)Math.rint(1000*chance)/1000;
-					tp_cc_price.setText(Core.getPrice(Integer.parseInt(tf_cc_tries.getText()), kanmusu));
-					tp_cc_chance.setText(chance+"%");
+					double chance = Core.getSumChance(kanmusu.getCraftchance(),
+							Integer.parseInt(cc_tf_tries.getText()));
+					chance = (double) Math.rint(1000 * chance) / 1000;
+					cc_tp_price.setText(Core.getPrice(Integer.parseInt(cc_tf_tries.getText()), kanmusu));
+					cc_tp_chance.setText(chance + "%");
 				}
-			} else if (e.getSource() == cb_cc_ship) {
-				kanmusu = (Kanmusu) cb_cc_ship.getSelectedItem();
-				tp_cc_craft.setText(kanmusu.craft+" "+kanmusu.getCraftchance()+"%");
+			} else if (e.getSource() == cc_cb_ship) {
+				kanmusu = (Kanmusu) cc_cb_ship.getSelectedItem();
+				cc_tp_craft.setText(kanmusu.craft + " " + kanmusu.getCraftchance() + "%");
 				if (kanmusu.craft == "unbuildable") {
-					tp_cc_price.setText("-----------");
-					tp_cc_chance.setText("-----------");
+					cc_tp_price.setText("-----------");
+					cc_tp_chance.setText("-----------");
 				}
 			} else if (e.getSource() == cb_dc_ship) {
 				kanmusu = (Kanmusu) cb_dc_ship.getSelectedItem();
-				//cb_dc_nodes.removeActionListener(listener);
+				// cb_dc_nodes.removeActionListener(listener);
 				cb_dc_maps.removeAllItems();
 				try {
 					buildList(cb_dc_maps, kanmusu.getMaps());
@@ -299,27 +352,46 @@ public class Ui {
 					connectErr = true;
 				}
 				if (!connectErr) {
-					bt_main_dc.setEnabled(true);
-					bt_main_cc.setEnabled(true);}
+					main_bt_dc.setEnabled(true);
+					main_bt_cc.setEnabled(true);
+					main_bt_ci.setEnabled(true);
+				}
 				tp_newver.setText("Ready.");
 			} else if (e.getSource() == cb_dc_maps) {
 				kanmusu = (Kanmusu) cb_dc_ship.getSelectedItem();
 				String map = (String) cb_dc_maps.getSelectedItem();
 				cb_dc_nodes.removeAllItems();
 				buildList(cb_dc_nodes, kanmusu.getNodes(map));
-				//cb_dc_nodes.addActionListener(listener);
-			} else if (e.getSource() == bt_dc_go) {
+				// cb_dc_nodes.addActionListener(listener);
+			} else if (e.getSource() == dc_bt_go) {
 				kanmusu = (Kanmusu) cb_dc_ship.getSelectedItem();
-				double res = Core.getSumChance(kanmusu.getDropChance(cb_dc_maps.getSelectedItem().toString(), 
+				double res = Core.getSumChance(kanmusu.getDropChance(cb_dc_maps.getSelectedItem().toString(),
 						cb_dc_nodes.getSelectedItem().toString()), Integer.valueOf(tf_dc_tries.getText()));
-				res = (Double)Math.rint(res*1000)/1000;
-				tp_dc_result.setText(res+"%");
+				res = (Double) Math.rint(res * 1000) / 1000;
+				dc_tp_result.setText(res + "%");
 			} else if (e.getSource() == cb_dc_nodes) {
-				// Кто-то навел порчу, из-за чего это говно не хочет работать. Час пытался избавиться от нее, но бестолку
-//				Object map = cb_dc_maps.getSelectedItem();
-//				Object node = cb_dc_nodes.getSelectedItem();
-//				if (node != null)
-//					tp_dc_chance1.setText(kanmusu.getDropChance(map.toString(), node.toString())+"%");
+				// Кто-то навел порчу, из-за чего это говно не хочет работать.
+				// Час пытался избавиться от нее, но бестолку
+				// Object map = cb_dc_maps.getSelectedItem();
+				// Object node = cb_dc_nodes.getSelectedItem();
+				// if (node != null)
+				// dc_tp_chance1.setText(kanmusu.getDropChance(map.toString(),
+				// node.toString())+"%");
+			} else if (e.getSource() == ci_bt_go) {
+				String craft = ci_tf_fuel.getText()+"/"+ci_tf_ammo.getText()+"/"+ci_tf_steel.getText()+"/"+ci_tf_boux.getText();
+				ci_cb_result.removeAllItems();
+				buildListKM(ci_cb_result, KCDB.getCraftDrops(craft));
+			} else if (e.getSource() == ci_cb_result) {
+				Kanmusu ciSelectedKM = null;
+				try {
+					ciSelectedKM = (Kanmusu) ci_cb_result.getSelectedItem();
+				} catch (Exception e1) {}
+				if (ciSelectedKM != null) {
+					String craft = ci_tf_fuel.getText()+"/"+ci_tf_ammo.getText()+"/"+ci_tf_steel.getText()+"/"+ci_tf_boux.getText();
+					double res = ciSelectedKM.getCraft(craft).chance;
+					res = (Double)Math.rint(res*1000)/1000;
+					ci_tp_chance.setText(res+"% | "+ciSelectedKM.getCraft(craft).entries+" entries");
+				}
 			}
 		}
 
@@ -334,69 +406,85 @@ public class Ui {
 				list.addItem(content[i]);
 		}
 		
+		private void buildListKM(JComboBox<Object> list, ArrayList<Kanmusu> contentList) {
+			if (contentList == null ||contentList.size() == 0) {
+				list.addItem("---");
+				return;
+			}
+			Core.kmsort(contentList);
+			for (int i = 0; i < contentList.size(); i++)
+				list.addItem(contentList.get(i));
+		}
+
 	}
 
 	static class weHandler implements WindowListener {
 
 		@Override
-		public void windowActivated(WindowEvent e) {}
+		public void windowActivated(WindowEvent e) {
+		}
 
 		@Override
-		public void windowClosed(WindowEvent e) {}
+		public void windowClosed(WindowEvent e) {
+		}
 
 		@Override
 		public void windowClosing(WindowEvent e) {
 			JFrame fr = (JFrame) e.getSource();
-			frame_main.setLocation(fr.getLocation());
-			frame_main.setVisible(true);
+			main_frame.setLocation(fr.getLocation());
+			main_frame.setVisible(true);
 		}
 
 		@Override
-		public void windowDeactivated(WindowEvent e) {}
+		public void windowDeactivated(WindowEvent e) {
+		}
 
 		@Override
-		public void windowDeiconified(WindowEvent e) {}
+		public void windowDeiconified(WindowEvent e) {
+		}
 
 		@Override
-		public void windowIconified(WindowEvent e) {}
+		public void windowIconified(WindowEvent e) {
+		}
 
 		@Override
-		public void windowOpened(WindowEvent e) {}	
+		public void windowOpened(WindowEvent e) {
+		}
 	}
-	
+
 	public static void err(String message, String title) {
 		JOptionPane.showMessageDialog(null, message, title, JOptionPane.ERROR_MESSAGE);
 	}
 
 	public static void CCCi() {
-		frame_ccc.setLayout(new FlowLayout());
-		frame_ccc.setSize(300, 130);
-		frame_ccc.setVisible(true);
-		frame_ccc.setResizable(false);
-		frame_ccc.setLocationRelativeTo(null);
-		tp_ccc.setEditable(false);
-		pb_ccc.setMinimum(0);
-		pb_ccc.setMaximum(2);
-		pb_ccc.setValue(0);
+		ccc_frame.setLayout(new FlowLayout());
+		ccc_frame.setSize(300, 130);
+		ccc_frame.setVisible(true);
+		ccc_frame.setResizable(false);
+		ccc_frame.setLocationRelativeTo(null);
+		ccc_tp_.setEditable(false);
+		ccc_pb.setMinimum(0);
+		ccc_pb.setMaximum(2);
+		ccc_pb.setValue(0);
 		Box b1 = Box.createHorizontalBox();
 		b1.add(Box.createHorizontalStrut(200));
-		b1.add(pb_ccc);
+		b1.add(ccc_pb);
 		b1.add(Box.createHorizontalStrut(200));
 		Box b2 = Box.createHorizontalBox();
 		b2.add(Box.createHorizontalStrut(200));
-		b2.add(tp_ccc);
+		b2.add(ccc_tp_);
 		b2.add(Box.createHorizontalStrut(200));
-		frame_ccc.add(b1);
-		frame_ccc.add(b2);
+		ccc_frame.add(b1);
+		ccc_frame.add(b2);
 	}
 
 	public static void CCCc(int total, int index, String status) {
-		pb_ccc.setMaximum(total-1);
-		pb_ccc.setValue(index);
-		tp_ccc.setText(status);
+		ccc_pb.setMaximum(total - 1);
+		ccc_pb.setValue(index);
+		ccc_tp_.setText(status);
 	}
 
 	public static void CCCe() {
-		frame_ccc.setVisible(false);
+		ccc_frame.setVisible(false);
 	}
 }

@@ -15,7 +15,7 @@ public class Core {
 	
 	private static int[] diff = new int[99];
 	
-	public static final String version = "0.3.2";
+	public static final String version = "0.4";
 	public static UpdateState update = UpdateState.unknown;
 	public static String newVersion = "?";
 
@@ -48,7 +48,7 @@ public class Core {
 	
 	
 
-	private static void kmsort(ArrayList<Kanmusu> list) {
+	public static void kmsort(ArrayList<Kanmusu> list) {
 		list.sort(new Comparator<Kanmusu>() {
 			@Override
 			public int compare(Kanmusu arg0, Kanmusu arg1) {
@@ -72,7 +72,7 @@ public class Core {
 		// Хуйня какая-то, не робит
 		// O, заробила, магия
 		for (int i = 0; i<list.size(); i++)
-			if (list.get(i).name.equals(name))
+			if (list.get(i).name.equals(name) || list.get(i).jpname.equals(name) || list.get(i).oname.equals(name))
 				return list.get(i);
 		return null;
 	}
