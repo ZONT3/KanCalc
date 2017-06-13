@@ -8277,7 +8277,7 @@
 		<nid>175</nid>
 		<name>Z3</name>
 		<nameJP original="'Max Schultz'">Ｚ3「マックス・シュルツ」</nameJP>
-		<craft>270/130/330/30</craft>
+		<craft>250/30/200/31</craft>
 		<stats>
 			<hp></hp><hpM></hpM>
 			<fp></fp><fpB></fpB>
