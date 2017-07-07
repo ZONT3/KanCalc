@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Kanmusu {
-	int id;
-	String type;
+	int id = -1;
+	String type = "?";
 	String name;
 	String jpname;
 	String oname;
@@ -25,6 +25,14 @@ public class Kanmusu {
 	
 	Kanmusu(String type) {
 		this.type = type;
+	}
+	
+	Kanmusu(String name, int id, int nid) {
+		this.name = name;
+		this.jpname = "?";
+		this.oname = "?";
+		this.id = id;
+		this.nid = nid;
 	}
 	
 	public static class Map {
@@ -100,7 +108,7 @@ public class Kanmusu {
 
 	public double getDropChance(String map, String node) {
 		for (int i=0; i<drops.size(); i++)
-			for (int j=0; j<drops.get(i).nodes.size(); i++)
+			for (int j=0; j<drops.get(i).nodes.size(); j++)
 				if (drops.get(i).nodes.get(j).name.equals(node) && drops.get(i).name.equals(map))
 					return drops.get(i).nodes.get(j).chance;
 		return -1;

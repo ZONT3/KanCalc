@@ -20,17 +20,26 @@ public class Core {
 	public static String newVersion = "?";
 
 	static boolean craftscheck = false;
+	static int add = -1;
 	
 	public static ArrayList<Kanmusu> kmlist = new ArrayList<>();
 	
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 		for (int i = 0; i < args.length; i++) {
-			System.out.println(args[i]);
-			switch (args[i]) {
+			String ar = args[i];
+			String par = "";
+			if (ar.lastIndexOf("=") >=0) {
+				par = ar.substring(ar.lastIndexOf("=")+1);
+				ar = ar.substring(0, ar.lastIndexOf("="));
+			}
+			System.out.println("arg="+ar+" par="+par);
+			switch (ar) {
 			case "-cc":
 				craftscheck = true;
 				break;
-
+			case "-add":
+				add = Integer.valueOf(par);
+				break;
 			default:
 				break;
 			}
@@ -42,6 +51,8 @@ public class Core {
 		kmlist = KMParser.getKMList();
 		if (craftscheck)
 			checkCrafts();
+		if (add != -1)
+			kmlist.add(new Kanmusu("Added by args", add, -1));
 		kmsort(kmlist);
 		Ui.init();
 	}
