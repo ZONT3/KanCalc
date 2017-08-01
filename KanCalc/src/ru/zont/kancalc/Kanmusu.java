@@ -54,7 +54,7 @@ public class Kanmusu {
 
 	@Override
 	public String toString() {
-		return oname+" ("+name+")";
+		return jpname+" ("+name+")";
 	}
 
 	public void setCraft(String craft) {

@@ -15,31 +15,43 @@ public class Core {
 	
 	private static int[] diff = new int[99];
 	
-	public static final String version = "0.4.1";
+	public static final String version = "0.5";
 	public static UpdateState update = UpdateState.unknown;
 	public static String newVersion = "?";
 
 	static boolean craftscheck = false;
-	static int add = -1;
+	static boolean nogui = false;
 	
 	public static ArrayList<Kanmusu> kmlist = new ArrayList<>();
 	
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 		for (int i = 0; i < args.length; i++) {
-			String ar = args[i];
-			String par = "";
-			if (ar.lastIndexOf("=") >=0) {
-				par = ar.substring(ar.lastIndexOf("=")+1);
-				ar = ar.substring(0, ar.lastIndexOf("="));
-			}
-			System.out.println("arg="+ar+" par="+par);
-			switch (ar) {
-			case "-cc":
+//			String ar = args[i];
+//			String par = "";
+//			if (ar.lastIndexOf("=") >=0) {
+//				par = ar.substring(ar.lastIndexOf("=")+1);
+//				ar = ar.substring(0, ar.lastIndexOf("="));
+//			}
+			switch (args[i]) {
+			case "-cval":
 				craftscheck = true;
 				break;
-			case "-add":
-				add = Integer.valueOf(par);
+			case "-nogui":
+				nogui = true;
 				break;
+			case "-help":
+			case "-?":
+				System.out.println("COMMAND LINE COMMANDS\n\n"
+						+ "-cval\t\tValidate native crafts from kmlist.xml\n"
+						+ "-nogui\t\tDon't initialze gui. If future operations hasn't defined, app will quit\n"
+						+ "-add=%id%\tTemporary adds kanmusu to list with given id, nid=-1 and with no other proporties\n"
+						+ "-cc=%id%\tGet craft chance of kanmusu with given id\n"
+						+ "-ccn=%name%\tGet craft chance of kanmusu with given name\n"
+						+ "-dl=%id%\tGet drop list for kanmusu with given id\n"
+						+ "-dln=%name%\tGet drop list for kanmusu with given name\n"
+						+ "-cdl=%craft%\tGet list of kanmusu wich crafts with given reciepe\n"
+						+ "-help/-?\tYou know.\n"
+						+ "\n");
 			default:
 				break;
 			}
@@ -51,10 +63,48 @@ public class Core {
 		kmlist = KMParser.getKMList();
 		if (craftscheck)
 			checkCrafts();
-		if (add != -1)
-			kmlist.add(new Kanmusu("Added by args", add, -1));
 		kmsort(kmlist);
-		Ui.init();
+		if (!nogui)
+			Ui.init();
+		
+		
+		
+		for (int i = 0; i < args.length; i++) {
+			String ar = args[i];
+			String par = "";
+			if (ar.lastIndexOf("=") >=0) {
+				par = ar.substring(ar.lastIndexOf("=")+1);
+				ar = ar.substring(0, ar.lastIndexOf("="));
+			}
+			switch (ar) {
+			case "-add":
+				kmlist.add(new Kanmusu("ID"+par, Integer.valueOf(par), -1));
+				break;
+			case "-cc":
+				if (getKanmusu(Integer.valueOf(par), kmlist) != null)
+					KCDB.getCC(getKanmusu(Integer.valueOf(par), kmlist), getKanmusu(Integer.valueOf(par), kmlist).craft);
+				else
+					System.out.println("Given Kanmusu doesn't exists in our DB");
+				break;
+			case "-ccn":
+				if (getKanmusu(par, kmlist) != null)
+					KCDB.getCC(getKanmusu(par, kmlist), getKanmusu(par, kmlist).craft);
+				else
+					System.out.println("Given Kanmusu doesn't exists in our DB");
+				break;
+			case "-dl":
+				KCDB.getDrops(getKanmusu(Integer.valueOf(par), kmlist));
+				break;
+			case "-dln":
+				KCDB.getDrops(getKanmusu(par, kmlist));
+				break;
+			case "-cdl":
+				KCDB.getCraftDrops(par);
+				break;
+			default:
+				break;
+			}
+		}
 	}
 	
 	

@@ -11,7 +11,7 @@ public class KCDB {
 	
 	public static double getCC(Kanmusu kanmusu, String craft) {
 		double res = -1;
-		System.out.println("Getting CC for "+kanmusu+" ID:"+kanmusu.id+" C:"+craft);
+		System.out.println("Getting CC for "+kanmusu+"\tID:"+kanmusu.id+"\tC:"+craft);
 		try {
 			org.jsoup.nodes.Document inf = Jsoup.connect("http://kancolle-db.net/ship/"+kanmusu.id+".html").get();
 			org.jsoup.select.Elements tr = inf.getElementsByTag("tr");
@@ -39,7 +39,7 @@ public class KCDB {
 
 	public static ArrayList<Kanmusu.Map> getDrops(Kanmusu kanmusu) throws IOException {
 		ArrayList<Kanmusu.Map> res = new ArrayList<>();
-		System.out.println("Getting Drops for "+kanmusu+" ID:"+kanmusu.id);
+		System.out.println("Getting Drops for "+kanmusu+"\tID:"+kanmusu.id);
 		Document inf = Jsoup.connect("http://kancolle-db.net/ship/"+kanmusu.id+".html").get();
 		Elements tr = inf.getElementsByTag("tr");
 		for (int i=0; i<tr.size(); i++) {
@@ -55,7 +55,7 @@ public class KCDB {
 				if (tr.get(i).getElementsContainingText("%").size()>0)
 					node.chance = Double.valueOf(tr.get(i).getElementsContainingText("%").get(1).text().substring
 							(0, tr.get(i).getElementsContainingText("%").get(1).text().length()-1));
-				System.out.println("MID:"+drop.id+" M:\""+drop.name+"\" N:\""+node.name+"\" C:"+node.chance);
+				System.out.println("MID:"+drop.id+"\tM:\""+drop.name+"\"\tN:\""+node.name+"\"\tC:"+node.chance);
 				res.get(Core.mapPresent(drop, res)).nodes.add(node);
 			}
 		}
@@ -80,7 +80,7 @@ public class KCDB {
 				int id = Integer.valueOf(tr.get(i).getElementsByAttributeValue("class", "ship").attr("id"));
 				Kanmusu kanmusu = Core.getKanmusu(id, Core.kmlist);
 				if (kanmusu == null) {
-					Ui.err("Listed kanmusu \""+name+"\" (ID"+id+") hadn't defined in our db. Sorry, this isn't release already", "WARNING");
+					Ui.err("Listed kanmusu \""+name+"\" (ID"+id+") hadn't defined in our db", "WARNING");
 					kanmusu = new Kanmusu("??");
 					kanmusu.jpname = name;
 					kanmusu.oname = name;
@@ -95,7 +95,7 @@ public class KCDB {
 				}
 				if (tr.get(i).getElementsByTag("td").size()>0)
 					ncr.entries = Integer.valueOf(tr.get(i).getElementsByTag("td").get(1).text());
-				System.out.println("SID:"+id+" SN:\""+name+"\" C:"+ncr.chance+" E:"+ncr.entries);
+				System.out.println("SID:"+id+"\tSN:\""+name+"\"\tC:"+ncr.chance+"\tE:"+ncr.entries);
 				kanmusu.crafts.add(ncr);
 				res.add(kanmusu);
 			}
