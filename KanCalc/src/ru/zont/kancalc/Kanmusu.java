@@ -9,6 +9,7 @@ public class Kanmusu {
 	String name;
 	String jpname;
 	String oname;
+	String cls;
 	String craft;
 	private double craftchance = -1;
 	boolean gotDrops = false;

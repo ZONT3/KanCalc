@@ -41,6 +41,7 @@ public class KMParser {
 		Node km = kms.item(Integer.valueOf(kmNodes.get(i)));
 		Element kmE = (Element) km;
 		Kanmusu kanmusu = new Kanmusu(kmE.getAttribute("type"));
+		kanmusu.cls = kmE.getAttribute("class");
 		NodeList kmps = km.getChildNodes();
 		for (int j = 0; j < kmps.getLength(); j++) {
 			if (kmps.item(j).getNodeType() == Node.ELEMENT_NODE) {
@@ -103,5 +104,55 @@ public class KMParser {
 			}
 		}
 		return kanmusu;
+	}
+	
+
+	static final String ctlistDir = "/constructionTime.xml";
+	
+	public static String getConstTime(Kanmusu kanmusu) {
+		if (kanmusu.craft.equals("unbuildable"))
+			return null;
+		
+		try {
+			DocumentBuilder db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+			Document doc = db.parse(Core.class.getResourceAsStream(ctlistDir));
+			Node root = doc.getDocumentElement();
+			NodeList nodes = root.getChildNodes();
+			ArrayList<Node> ships = new ArrayList<>();
+			ArrayList<Node> classes = new ArrayList<>();
+			for (int i=0; i<nodes.getLength(); i++) {
+				if (nodes.item(i).getNodeName().equals("ship"))
+					ships.add(nodes.item(i));
+				else if (nodes.item(i).getNodeName().equals("class"))
+					classes.add(nodes.item(i));
+			}
+			
+			for (int i=0; i<ships.size(); i++) {
+				Node node = ships.get(i);
+				if (node.getNodeType() != Node.ELEMENT_NODE)
+					continue;
+				Element e = (Element) node;
+				if (e.getAttribute("name").equals(kanmusu.name) || e.getAttribute("id").equals(kanmusu.id+""))
+					return e.getTextContent();
+			}
+			for (int i=0; i<classes.size(); i++) {
+				Node node = classes.get(i);
+				if (node.getNodeType() != Node.ELEMENT_NODE)
+					continue;
+				Element e = (Element) node;
+				if (e.getAttribute("name").equals(kanmusu.cls))
+					return e.getTextContent();
+			}
+		} catch (ParserConfigurationException | SAXException | IOException e) {e.printStackTrace();}
+		
+		return null;
+	}
+	
+	public static String getConstTime(String name) {
+		return getConstTime(Core.getKanmusu(name, Core.kmlist));
+	}
+	
+	public static String getConstTime(int id) {
+		return getConstTime(Core.getKanmusu(id, Core.kmlist));
 	}
 }

@@ -6407,7 +6407,7 @@
 			<suffixJP>改</suffixJP>
 		</remodel>
 	</ship>
-	<ship type="CVL" class="Zuihou">
+	<ship type="CVL" class="Shouhou">
 		<id>116</id>
 		<nid>112</nid>
 		<name>Zuihou</name>
@@ -9817,6 +9817,306 @@
 			</slots>
 			<fuel>140</fuel>
 			<ammo>170</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="DD" class="Maestrale">
+		<id>443</id>
+		<nid>243</nid>
+		<name>Libeccio</name>
+		<nameJP original="Libeccio">リベッテオ</nameJP>
+		<craft>unbuildable</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="2">
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+		</stats>
+		<remodel index="1" lvl="30">
+			<id>347</id>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">0</slot>
+				<slot id="1">0</slot>
+				<slot id="2">0</slot>
+			</slots>
+			<fuel>15</fuel>
+			<ammo>20</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="CV" class="Aquila">
+		<id>444</id>
+		<nid>444</nid>
+		<name>Aquila</name>
+		<nameJP original="Aquila">アクイラ</nameJP>
+		<craft>unbuildable</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">10</slot>
+				<slot id="1">26</slot>
+				<slot id="2">15</slot>
+			</slots>
+			<fuel>40</fuel>
+			<ammo>45</ammo>
+		</stats>
+		<remodel index="1" lvl="45">
+			<id>365</id>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="4">
+				<slot id="0">15</slot>
+				<slot id="1">26</slot>
+				<slot id="2">15</slot>
+				<slot id="3">10</slot>
+			</slots>
+			<fuel>45</fuel>
+			<ammo>55</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+		<ship type="AV" class="Akitsushima">
+		<id>445</id>
+		<nid>245</nid>
+		<name>Libeccio</name>
+		<nameJP>秋津洲</nameJP>
+		<craft>unbuildable</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="2">
+				<slot id="0">1</slot>
+				<slot id="1">1</slot>
+			</slots>
+			<fuel>50</fuel>
+			<ammo>10</ammo>
+		</stats>
+		<remodel index="1" lvl="35">
+			<id>450</id>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">1</slot>
+				<slot id="1">1</slot>
+				<slot id="2">1</slot>
+			</slots>
+			<fuel>60</fuel>
+			<ammo>15</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="CA" class="Zara">
+		<id>448</id>
+		<nid>248</nid>
+		<name>Zara</name>
+		<nameJP original="Zara">ザラ</nameJP>
+		<craft>unbuildable</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">2</slot>
+				<slot id="1">2</slot>
+				<slot id="2">2</slot>
+			</slots>
+			<fuel>45</fuel>
+			<ammo>60</ammo>
+		</stats>
+		<remodel index="1" lvl="40">
+			<id>358</id>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="4">
+				<slot id="0">2</slot>
+				<slot id="1">2</slot>
+				<slot id="2">2</slot>
+				<slot id="3">2</slot>
+			</slots>
+			<fuel>45</fuel>
+			<ammo>65</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="CA" class="Zara">
+		<id>449</id>
+		<nid>249</nid>
+		<name>Pola</name>
+		<nameJP original="Pola">ポラ</nameJP>
+		<craft>unbuildable</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">2</slot>
+				<slot id="1">2</slot>
+				<slot id="2">2</slot>
+			</slots>
+			<fuel>45</fuel>
+			<ammo>60</ammo>
+		</stats>
+		<remodel index="1" lvl="40">
+			<id>358</id>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="4">
+				<slot id="0">2</slot>
+				<slot id="1">2</slot>
+				<slot id="2">2</slot>
+				<slot id="3">2</slot>
+			</slots>
+			<fuel>45</fuel>
+			<ammo>65</ammo>
+			<suffix>Kai</suffix>
+			<suffixJP>改</suffixJP>
+		</remodel>
+	</ship>
+	<ship type="AV" class="Mizuho">
+		<id>451</id>
+		<nid>251</nid>
+		<name>Mizuho</name>
+		<nameJP>瑞穂</nameJP>
+		<craft>4000/2000/5000/7000</craft>
+		<stats>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="2">
+				<slot id="0">12</slot>
+				<slot id="1">12</slot>
+			</slots>
+			<fuel>35</fuel>
+			<ammo>35</ammo>
+		</stats>
+		<remodel index="1" lvl="40">
+			<id>358</id>
+			<hp></hp><hpM></hpM>
+			<fp></fp><fpB></fpB>
+			<tp></tp><tpB></tpB>
+			<aa></aa><aaB></aaB>
+			<ar></ar><arB></arB>
+			<eva></eva><evaB></evaB>
+			<asw></asw><aswB></aswB>
+			<los></los><losB></losB>
+			<luk></luk><lukM></lukM>
+			<rng></rng>
+			<speed></speed>
+			<slots count="3">
+				<slot id="0">12</slot>
+				<slot id="1">12</slot>
+				<slot id="2">8</slot>
+			</slots>
+			<fuel>40</fuel>
+			<ammo>45</ammo>
 			<suffix>Kai</suffix>
 			<suffixJP>改</suffixJP>
 		</remodel>

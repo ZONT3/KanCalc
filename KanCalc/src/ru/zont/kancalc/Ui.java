@@ -47,7 +47,6 @@ public class Ui {
 	static JTextField cc_tf_tries = new JTextField("Tries");
 	static JTextPane cc_tp_craft = new JTextPane();
 	static JButton cc_bt_go = new JButton("GO");
-	static JTextPane cc_tp_price = new JTextPane();
 	static JTextPane cc_tp_chance = new JTextPane();
 
 	static String[] ranks = { "S", "A", "B", "C", "D" };
@@ -127,7 +126,6 @@ public class Ui {
 		sumch_tp_result.setEditable(false);
 		cc_tp_craft.setEditable(false);
 		cc_tp_chance.setEditable(false);
-		cc_tp_price.setEditable(false);
 		cc_bt_go.addActionListener(listener);
 		cc_cb_ship.addActionListener(listener);
 		cc_cb_ship.setSelectedItem(Core.getKanmusu("Yuudachi", Core.kmlist));
@@ -144,7 +142,6 @@ public class Ui {
 		cb3.add(Box.createHorizontalStrut(300));
 		cb3.add(cc_bt_go);
 		cb3.add(cc_tp_chance);
-		cb3.add(cc_tp_price);
 		cb3.add(Box.createHorizontalStrut(300));
 		cc_frame.add(cb1);
 		cc_frame.add(cb2);
@@ -332,14 +329,12 @@ public class Ui {
 					double chance = Core.getSumChance(kanmusu.getCraftchance(),
 							Integer.parseInt(cc_tf_tries.getText()));
 					chance = (double) Math.rint(1000 * chance) / 1000;
-					cc_tp_price.setText(Core.getPrice(Integer.parseInt(cc_tf_tries.getText()), kanmusu));
-					cc_tp_chance.setText(chance + "%");
+					cc_tp_chance.setText(Core.getPrice(Integer.parseInt(cc_tf_tries.getText()), kanmusu) + " | " + chance + "%");
 				}
 			} else if (e.getSource() == cc_cb_ship) {
 				kanmusu = (Kanmusu) cc_cb_ship.getSelectedItem();
-				cc_tp_craft.setText(kanmusu.craft + " " + kanmusu.getCraftchance() + "%");
+				cc_tp_craft.setText(kanmusu.craft + " | " + kanmusu.getCraftchance() + "%" + " | " + KMParser.getConstTime(kanmusu));
 				if (kanmusu.craft == "unbuildable") {
-					cc_tp_price.setText("-----------");
 					cc_tp_chance.setText("-----------");
 				}
 			} else if (e.getSource() == cb_dc_ship) {
