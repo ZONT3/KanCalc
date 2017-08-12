@@ -15,7 +15,7 @@ public class Core {
 	
 	private static int[] diff = new int[99];
 	
-	public static final String version = "0.5";
+	public static final String version = "1.0";
 	public static UpdateState update = UpdateState.unknown;
 	public static String newVersion = "?";
 
