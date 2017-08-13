@@ -15,7 +15,7 @@ public class Core {
 	
 	private static int[] diff = new int[99];
 	
-	public static final String version = "1.1pre1";
+	public static final String version = "1.1";
 	public static UpdateState update = UpdateState.unknown;
 	public static String newVersion = "?";
 
@@ -201,7 +201,45 @@ public class Core {
 		return chance;
 	}
 
-	public static int getSortiresLeft(String lvls, int basexp, double rankmult) {
+	public static int getBattlesLeft(String lvls, String map, String rank) {
+		double basexp = 0;
+		switch (map) {
+		case "3-2":
+			basexp = 320;
+			break;
+		case "1-5":
+			basexp = 150;
+			break;
+		case "4-3":
+			basexp = 330;
+			break;
+		case "5-3":
+			basexp = 400;
+			break;
+		default:
+			break;
+		}
+		double rankmult = 1;
+		switch (rank) {
+		case "S":
+			rankmult = 1.2;
+			break;
+		case "A":
+			rankmult = 1;
+			break;
+		case "B":
+			rankmult = 1;
+			break;
+		case "C":
+			rankmult = 0.8;
+			break;
+		case "D":
+			rankmult = 0.7;
+			break;
+		default:
+			break;
+		}
+		
 		int slvl;
 		int llvl;
 		int i = 0;
@@ -213,13 +251,13 @@ public class Core {
 		slvl = Integer.parseInt(lvls.substring(0, i));
 		llvl = Integer.parseInt(lvls.substring(i+1));
 		
-		int cxp = 0;
-		int rxp = 0;
+		double cxp = 0;
+		double rxp = 0;
 		for (int ii=0; ii<slvl; ii++)
 			cxp+=diff[ii];
 		for (int ii=0; ii<llvl; ii++)
 			rxp+=diff[ii];
-		return (int) ((rxp-cxp)/(basexp*rankmult*3));
+		return (int) ((rxp-cxp)/(basexp*rankmult*3.0))+1;
 	}
 
 	public static String getPrice(int tries, Kanmusu kanmusu) {
@@ -248,6 +286,20 @@ public class Core {
 				return i;
 		}
 		return -1;
+	}
+	
+	public static class Consumption {
+		int fuel = 0;
+		int ammo = 0;
+	}
+
+	public static Consumption getConsumption(Kanmusu[] setup, String map) {
+		Consumption res = new Consumption();
+		for (int i = 0; i < setup.length; i++) {
+			res.fuel += setup[i].fuel*0.2;
+			res.ammo += setup[i].ammo*0.2;
+		}
+		return res;
 	}
 	
 }

@@ -5,7 +5,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -24,7 +29,7 @@ public class Ui {
 
 	static JFrame ccc_frame = new JFrame("Validating crafts..");
 	static JProgressBar ccc_pb = new JProgressBar();
-	static JTextPane ccc_tp_ = new JTextPane();
+	static JTextPane ccc_tp = new JTextPane();
 
 	static JFrame main_frame = new JFrame("KanCalc v." + Core.version);
 	static JButton main_bt_smuch = new JButton("Profit");
@@ -192,6 +197,7 @@ public class Ui {
 		farm_frame_setup.add(farm_setup_cb_4);
 		farm_frame_setup.add(farm_setup_cb_5);
 		farm_frame_setup.add(farm_setup_cb_6);
+		reestablishFleet();
 
 		// ---------------------------------------SMUCH
 		sumch_frame.setLayout(new FlowLayout());
@@ -290,6 +296,24 @@ public class Ui {
 		
 	}
 
+	private static void reestablishFleet() {
+		Fleet fleet = null;
+		try {
+			FileInputStream is = new FileInputStream("lastfleet");
+			ObjectInputStream ois = new ObjectInputStream(is);
+			fleet = (Fleet)ois.readObject();
+			ois.close();
+		} catch (IOException | ClassNotFoundException e) {e.printStackTrace();}
+		if (fleet == null)
+			return;
+		farm_setup_cb_1.setSelectedIndex(fleet.fleet[0]);
+		farm_setup_cb_2.setSelectedIndex(fleet.fleet[1]);
+		farm_setup_cb_3.setSelectedIndex(fleet.fleet[2]);
+		farm_setup_cb_4.setSelectedIndex(fleet.fleet[3]);
+		farm_setup_cb_5.setSelectedIndex(fleet.fleet[4]);
+		farm_setup_cb_6.setSelectedIndex(fleet.fleet[5]);
+	}
+
 	static class eHandler implements ActionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
@@ -319,6 +343,30 @@ public class Ui {
 				main_frame.setVisible(false);
 				frame.setVisible(true);
 			} else if (e.getSource() == farm_bt_go) {
+				Kanmusu[] setup = new Kanmusu[6];
+				setup[0] = (Kanmusu) farm_setup_cb_1.getSelectedItem();
+				setup[1] = (Kanmusu) farm_setup_cb_2.getSelectedItem();
+				setup[2] = (Kanmusu) farm_setup_cb_3.getSelectedItem();
+				setup[3] = (Kanmusu) farm_setup_cb_4.getSelectedItem();
+				setup[4] = (Kanmusu) farm_setup_cb_5.getSelectedItem();
+				setup[5] = (Kanmusu) farm_setup_cb_6.getSelectedItem();
+				Fleet fleet = new Fleet();
+				fleet.fleet[0] = farm_setup_cb_1.getSelectedIndex();
+				fleet.fleet[1] = farm_setup_cb_2.getSelectedIndex();
+				fleet.fleet[2] = farm_setup_cb_3.getSelectedIndex();
+				fleet.fleet[3] = farm_setup_cb_4.getSelectedIndex();
+				fleet.fleet[4] = farm_setup_cb_5.getSelectedIndex();
+				fleet.fleet[5] = farm_setup_cb_6.getSelectedIndex();
+				try {
+					FileOutputStream os = new FileOutputStream("lastfleet");
+					ObjectOutputStream oos = new ObjectOutputStream(os);
+					oos.writeObject(fleet);
+					oos.flush();
+					oos.close();
+				} catch (IOException e1) {e1.printStackTrace();}
+				int battles = Core.getBattlesLeft(farm_tf_slvl.getText()+"-"+farm_tf_elvl.getText(), (String)farm_cb_map.getSelectedItem(), (String)farm_cb_rank.getSelectedItem());
+				Core.Consumption cons = Core.getConsumption(setup, (String)farm_cb_map.getSelectedItem());
+				farm_tp_result.setText(battles+" battles | "+cons.fuel*battles+"/"+cons.ammo*battles+" F/A");
 				
 			} else if (e.getSource() == farm_bt_setup) {
 				farm_frame_setup.setVisible(true);
@@ -457,7 +505,7 @@ public class Ui {
 		ccc_frame.setResizable(false);
 		ccc_frame.setLocationRelativeTo(null);
 		ccc_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		ccc_tp_.setEditable(false);
+		ccc_tp.setEditable(false);
 		ccc_pb.setMinimum(0);
 		ccc_pb.setMaximum(2);
 		ccc_pb.setValue(0);
@@ -467,7 +515,7 @@ public class Ui {
 		b1.add(Box.createHorizontalStrut(200));
 		Box b2 = Box.createHorizontalBox();
 		b2.add(Box.createHorizontalStrut(200));
-		b2.add(ccc_tp_);
+		b2.add(ccc_tp);
 		b2.add(Box.createHorizontalStrut(200));
 		ccc_frame.add(b1);
 		ccc_frame.add(b2);
@@ -476,10 +524,14 @@ public class Ui {
 	public static void CCCc(int total, int index, String status) {
 		ccc_pb.setMaximum(total - 1);
 		ccc_pb.setValue(index);
-		ccc_tp_.setText(status);
+		ccc_tp.setText(status);
 	}
 
 	public static void CCCe() {
 		ccc_frame.setVisible(false);
+	}
+	
+	private static class Fleet implements Serializable {
+		int[] fleet = new int[6];
 	}
 }
