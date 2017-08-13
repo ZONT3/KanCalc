@@ -14,7 +14,8 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 public class KMParser {
-	static final String kmlistDir = "/kanmusuList.xml";
+	static final String kmlistDir = "/data/kanmusuList.xml";
+	static final String ctlistDir = "/data/constructionTime.xml";
 	
 	static DocumentBuilder db;
 	static Document kmlistFile;
@@ -74,6 +75,9 @@ public class KMParser {
 					break;
 				case "craft":
 					kanmusu.setCraft(kmp.getTextContent());
+					break;
+				case "img":
+					kanmusu.image = kmp.getTextContent();
 					break;
 				case "stats":
 					for (int k = 0; k<kmp.getChildNodes().getLength(); k++) {
@@ -172,8 +176,6 @@ public class KMParser {
 		return kanmusu;
 	}
 	
-
-	static final String ctlistDir = "/constructionTime.xml";
 	
 	public static String getConstTime(Kanmusu kanmusu) {
 		if (kanmusu.craft.equals("unbuildable"))

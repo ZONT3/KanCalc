@@ -17,6 +17,7 @@ public class Kanmusu {
 	int minlevel = 0;
 	ArrayList<Integer> remodels = new ArrayList<>();
 	ArrayList<Craft> crafts = new ArrayList<>();
+	String image = null;
 
 	int index;
 	int nid;

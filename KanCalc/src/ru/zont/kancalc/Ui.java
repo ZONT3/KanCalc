@@ -1,5 +1,7 @@
 package ru.zont.kancalc;
 
+import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,21 +17,33 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JProgressBar;
+import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 
-public class Ui {
+public class Ui { 
 	static boolean connectErr = false;
 
 	static JFrame ccc_frame = new JFrame("Validating crafts..");
 	static JProgressBar ccc_pb = new JProgressBar();
 	static JTextPane ccc_tp = new JTextPane();
+	
+	static JFrame dynselect_frame;
+	static JPanel dynselect_panel;
+	static JScrollPane dynselect_sp;
+	static ArrayList<JButton> dynselect_bt_types = new ArrayList<>();
+	static ArrayList<String> dynselect_types = new ArrayList<>();
+	static ArrayList<JButton> dynselect_bt_classes = new ArrayList<>();
+	static ArrayList<String> dynselect_classes = new ArrayList<>();
 
 	static JFrame main_frame = new JFrame("KanCalc v." + Core.version);
 	static JButton main_bt_smuch = new JButton("Profit");
@@ -109,7 +123,7 @@ public class Ui {
 		main_bt_ci.setEnabled(false);
 		tp_newver.setText("Connecting...");
 		tp_newver.setEditable(false);
-
+		
 		Box b11 = Box.createHorizontalBox();
 		b11.add(Box.createHorizontalStrut(300));
 		b11.add(main_bt_smuch);
@@ -294,6 +308,40 @@ public class Ui {
 		ci_frame.add(ci3);
 		ci_frame.add(ci4);
 		
+		
+		
+		dynselect_frame = new JFrame("Select type");
+		dynselect_panel = new JPanel();
+		dynselect_sp = new JScrollPane(dynselect_panel);
+		dynselect_panel.setLayout(new BoxLayout(dynselect_panel, BoxLayout.Y_AXIS));
+		
+		for (int i=0; i<Core.kmlistAM.size(); i++) {
+			Kanmusu km = Core.kmlistAM.get(i);
+			if (strExists(dynselect_types, km.type))
+				continue;
+			dynselect_types.add(km.type);
+			JButton butt = new JButton(km.type);
+			if (km.image!=null)
+				butt.setIcon(new ImageIcon(Core.class.getResource("/images/kms/"+km.image)));
+			dynselect_bt_types.add(butt);
+		}
+		
+		dynselect_frame.getContentPane().setLayout(new BorderLayout());
+		dynselect_frame.getContentPane().add(dynselect_sp, BorderLayout.CENTER);
+		
+		for (int i=0; i<dynselect_bt_types.size(); i++)
+			dynselect_panel.add(dynselect_bt_types.get(i));
+		dynselect_sp.revalidate();
+		dynselect_frame.setPreferredSize(new Dimension(250, 400));
+		dynselect_frame.pack();
+		dynselect_frame.setVisible(true);
+	}
+
+	private static boolean strExists(ArrayList<String> list, String str) {
+		for (int i=0; i<list.size(); i++)
+			if (list.get(i).equals(str))
+				return true;
+		return false;
 	}
 
 	private static void reestablishFleet() {
