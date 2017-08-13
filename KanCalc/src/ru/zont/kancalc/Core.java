@@ -15,7 +15,7 @@ public class Core {
 	
 	private static int[] diff = new int[99];
 	
-	public static final String version = "1.0";
+	public static final String version = "1.1pre1";
 	public static UpdateState update = UpdateState.unknown;
 	public static String newVersion = "?";
 
@@ -23,6 +23,10 @@ public class Core {
 	static boolean nogui = false;
 	
 	public static ArrayList<Kanmusu> kmlist = new ArrayList<>();
+	public static ArrayList<Kanmusu> kmlistAM = new ArrayList<>();
+	
+	public static String[] ranks = {"S", "A", "B", "C", "D"};
+	public static String[] farmMaps = {"1-5", "3-2", "4-3", "5-3"};
 	
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 		for (int i = 0; i < args.length; i++) {
@@ -61,9 +65,11 @@ public class Core {
 		
 		initLevels();
 		kmlist = KMParser.getKMList();
+		kmlistAM = KMParser.getKMList(true);
 		if (craftscheck)
 			checkCrafts();
 		kmsort(kmlist);
+		kmsort2(kmlistAM);
 		if (!nogui)
 			Ui.init();
 		
@@ -114,6 +120,15 @@ public class Core {
 			@Override
 			public int compare(Kanmusu arg0, Kanmusu arg1) {
 				return arg0.nid-arg1.nid;
+			}
+		});
+	}
+	
+	public static void kmsort2(ArrayList<Kanmusu> list) {
+		list.sort(new Comparator<Kanmusu>() {
+			@Override
+			public int compare(Kanmusu arg0, Kanmusu arg1) {
+				return arg0.name.compareTo(arg1.name);
 			}
 		});
 	}

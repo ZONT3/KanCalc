@@ -10,11 +10,12 @@ public class Kanmusu {
 	String jpname;
 	String oname;
 	String cls;
-	String craft;
+	String craft = "unbuildable";
 	private double craftchance = -1;
 	boolean gotDrops = false;
 	ArrayList<Map> drops = new ArrayList<>();
-	int nextlevel;
+	int minlevel = 0;
+	ArrayList<Integer> remodels = new ArrayList<>();
 	ArrayList<Craft> crafts = new ArrayList<>();
 
 	int index;
@@ -26,6 +27,10 @@ public class Kanmusu {
 	
 	Kanmusu(String type) {
 		this.type = type;
+		this.name = "?";
+		this.jpname = "?";
+		this.oname = "?";
+		remodels.add(0, 0);
 	}
 	
 	Kanmusu(String name, int id, int nid) {
@@ -34,6 +39,7 @@ public class Kanmusu {
 		this.oname = "?";
 		this.id = id;
 		this.nid = nid;
+		remodels.add(0, 0);
 	}
 	
 	public static class Map {

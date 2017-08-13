@@ -22,7 +22,13 @@ public class KMParser {
 	static NodeList kms;
 	static ArrayList<String> kmNodes;
 	
+	static ArrayList<Kanmusu> remodels = new ArrayList<>();
+	
 	public static ArrayList<Kanmusu> getKMList() throws ParserConfigurationException, SAXException, IOException {
+		return getKMList(false);
+	}
+	
+	public static ArrayList<Kanmusu> getKMList(boolean am) throws ParserConfigurationException, SAXException, IOException {
 		db = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 		kmlistFile = db.parse(Core.class.getResourceAsStream(kmlistDir));
 		root = kmlistFile.getDocumentElement();
@@ -33,11 +39,12 @@ public class KMParser {
 		kms = root.getChildNodes();
 		ArrayList<Kanmusu> res = new ArrayList<>();
 		for (int i=0; i<kmNodes.size(); i++)
-			res.add(getKM(i));
+			res.add(getKM(i, am));
+		res.addAll(remodels);
 		return res;
 	}
 
-	private static Kanmusu getKM(int i) {
+	private static Kanmusu getKM(int i, boolean am) {
 		Node km = kms.item(Integer.valueOf(kmNodes.get(i)));
 		Element kmE = (Element) km;
 		Kanmusu kanmusu = new Kanmusu(kmE.getAttribute("type"));
@@ -96,7 +103,66 @@ public class KMParser {
 					}
 					break;
 				case "remodel":
-					// TODO remodel system
+					if (!am)
+						break;
+					String type = kanmusu.type;
+					if (kmp.hasAttribute("type"))
+						type = kmp.getAttribute("type");
+					
+					Kanmusu remodel = new Kanmusu(type);
+					remodel.name = kanmusu.name;
+					remodel.jpname = kanmusu.jpname;
+					remodel.oname = kanmusu.oname;
+					remodel.type = kanmusu.type;
+					remodel.cls = kanmusu.cls;
+					
+					if (kmp.hasAttribute("type"))
+						remodel.type = kmp.getAttribute("type");
+					if (kmp.hasAttribute("class"))
+						remodel.cls = kmp.getAttribute("class");
+					
+					
+					NodeList rmps = kmp.getChildNodes();
+					for (int k = 0; k < rmps.getLength(); k++) {
+						if (rmps.item(k).getNodeType() != Node.ELEMENT_NODE)
+							continue;
+						Element rmp = (Element) rmps.item(k);
+						
+						switch (rmp.getNodeName()) {
+						case "id":
+							kanmusu.remodels.add(Integer.valueOf(kmp.getAttribute("index")), Integer.valueOf(rmp.getTextContent()));
+							break;
+						case "name":
+							remodel.name = rmp.getTextContent();
+							break;
+						case "nameJP":
+							remodel.jpname = rmp.getTextContent();
+							remodel.oname = remodel.jpname;
+							if (rmp.hasAttribute("original"))
+								remodel.oname = rmp.getAttribute("original");
+							break;
+						case "fuel":
+							remodel.fuel = Integer.valueOf(rmp.getTextContent());
+							break;
+						case "ammo":
+							remodel.ammo = Integer.valueOf(rmp.getTextContent());
+							break;
+						case "suffix":
+							remodel.name = remodel.name+" "+rmp.getTextContent();
+							break;
+						case "suffixJP":
+							remodel.jpname = remodel.jpname+rmp.getTextContent();
+							if (rmp.getTextContent().equals("改"))
+								remodel.oname = remodel.oname+rmp.getTextContent();
+							else
+								remodel.oname = remodel.oname+"・"+rmp.getTextContent();
+							break;
+						default:
+							break;
+						}
+					}
+					
+					remodels.add(remodel);
 					break;
 				default:
 					break;

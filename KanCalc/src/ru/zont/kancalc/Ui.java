@@ -12,6 +12,7 @@ import java.util.Arrays;
 import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
@@ -21,21 +22,19 @@ import javax.swing.JTextPane;
 public class Ui {
 	static boolean connectErr = false;
 
-	static private double farm_rankmult = 1;
-
 	static JFrame ccc_frame = new JFrame("Validating crafts..");
 	static JProgressBar ccc_pb = new JProgressBar();
 	static JTextPane ccc_tp_ = new JTextPane();
 
-	static JFrame main_frame = new JFrame("ChanceCalc v." + Core.version);
-	static JButton main_bt_smuch = new JButton("SUM");
+	static JFrame main_frame = new JFrame("KanCalc v." + Core.version);
+	static JButton main_bt_smuch = new JButton("Profit");
 	static JButton main_farm_bt = new JButton("XP Farm");
 	static JButton main_bt_cc = new JButton("Craft Chance");
 	static JButton main_bt_dc = new JButton("Drop Chance");
 	static JButton main_bt_ci = new JButton("Craft Droplist");
 	static JTextPane tp_newver = new JTextPane();
 
-	static JFrame sumch_frame = new JFrame("SUM chance");
+	static JFrame sumch_frame = new JFrame("Profit of tries");
 	static JTextField sumch_tf_tries = new JTextField("tries..");
 	static JTextField sumch_tf_chance = new JTextField("50");
 	static JTextPane sumch_tp_prec = new JTextPane();
@@ -49,15 +48,22 @@ public class Ui {
 	static JButton cc_bt_go = new JButton("GO");
 	static JTextPane cc_tp_chance = new JTextPane();
 
-	static String[] ranks = { "S", "A", "B", "C", "D" };
 	static JFrame farm_frame = new JFrame("FarmCalc");
 	static JButton farm_bt_go = new JButton("GO");
-	static JTextField farm_tf_lvls = new JTextField("1-75");
-	static JTextField farm_tf_basexp = new JTextField("320");
-	static JComboBox<String> mb_farm_rank = new JComboBox<>(ranks);
-	static JTextField farm_tf_cons_t = new JTextField("20");
-	static JTextField farm_tf_cons_a = new JTextField("30");
+	static JTextField farm_tf_slvl = new JTextField("1");
+	static JLabel farm_l_tire = new JLabel("—");
+	static JTextField farm_tf_elvl = new JTextField("75");
+	static JComboBox<String> farm_cb_map = new JComboBox<>(Core.farmMaps);
+	static JComboBox<String> farm_cb_rank = new JComboBox<>(Core.ranks);
+	static JButton farm_bt_setup = new JButton("Edit setup");
 	static JTextPane farm_tp_result = new JTextPane();
+	static JFrame farm_frame_setup = new JFrame("Edit Setup");
+	static JComboBox<Object> farm_setup_cb_1 = new JComboBox<>(Core.kmlistAM.toArray());
+	static JComboBox<Object> farm_setup_cb_2 = new JComboBox<>(Core.kmlistAM.toArray());
+	static JComboBox<Object> farm_setup_cb_3 = new JComboBox<>(Core.kmlistAM.toArray());
+	static JComboBox<Object> farm_setup_cb_4 = new JComboBox<>(Core.kmlistAM.toArray());
+	static JComboBox<Object> farm_setup_cb_5 = new JComboBox<>(Core.kmlistAM.toArray());
+	static JComboBox<Object> farm_setup_cb_6 = new JComboBox<>(Core.kmlistAM.toArray());
 
 	static String[] defaultMaps = { "---" };
 	static JFrame dc_frame = new JFrame("Chance of drop");
@@ -153,26 +159,39 @@ public class Ui {
 		farm_frame.setSize(300, 140);
 		farm_frame.setResizable(false);
 		farm_bt_go.addActionListener(listener);
+		farm_bt_setup.addActionListener(listener);
 		farm_tp_result.setEditable(false);
+		farm_frame_setup.setLayout(new FlowLayout());
+		farm_frame_setup.setSize(460, 220);
+		farm_frame_setup.setResizable(false);
+		farm_frame_setup.setVisible(false);
 		Box fb1 = Box.createHorizontalBox();
 		fb1.add(Box.createHorizontalStrut(150));
-		fb1.add(farm_tf_lvls);
-		fb1.add(farm_tf_basexp);
-		fb1.add(mb_farm_rank);
+		fb1.add(farm_tf_slvl);
+		fb1.add(farm_l_tire);
+		fb1.add(farm_tf_elvl);
+		fb1.add(Box.createHorizontalStrut(40));
+		fb1.add(farm_cb_map);
+		fb1.add(farm_cb_rank);
 		fb1.add(Box.createHorizontalStrut(150));
 		Box fb2 = Box.createHorizontalBox();
 		fb2.add(Box.createHorizontalStrut(150));
-		fb2.add(farm_bt_go);
-		fb2.add(farm_tp_result);
+		fb2.add(farm_bt_setup);
 		fb2.add(Box.createHorizontalStrut(150));
 		Box fb3 = Box.createHorizontalBox();
 		fb3.add(Box.createHorizontalStrut(150));
-		fb3.add(farm_tf_cons_t);
-		fb3.add(farm_tf_cons_a);
+		fb3.add(farm_bt_go);
+		fb3.add(farm_tp_result);
 		fb3.add(Box.createHorizontalStrut(150));
 		farm_frame.add(fb1);
-		farm_frame.add(fb3);
 		farm_frame.add(fb2);
+		farm_frame.add(fb3);
+		farm_frame_setup.add(farm_setup_cb_1);
+		farm_frame_setup.add(farm_setup_cb_2);
+		farm_frame_setup.add(farm_setup_cb_3);
+		farm_frame_setup.add(farm_setup_cb_4);
+		farm_frame_setup.add(farm_setup_cb_5);
+		farm_frame_setup.add(farm_setup_cb_6);
 
 		// ---------------------------------------SMUCH
 		sumch_frame.setLayout(new FlowLayout());
@@ -300,29 +319,9 @@ public class Ui {
 				main_frame.setVisible(false);
 				frame.setVisible(true);
 			} else if (e.getSource() == farm_bt_go) {
-				switch (mb_farm_rank.getSelectedIndex()) {
-				case 0:
-					farm_rankmult = 1.2;
-					break;
-				case 1:
-					farm_rankmult = 1;
-					break;
-				case 2:
-					farm_rankmult = 1;
-					break;
-				case 3:
-					farm_rankmult = 0.8;
-					break;
-				case 4:
-					farm_rankmult = 0.7;
-					break;
-				default:
-					break;
-				}
-				int sts = Core.getSortiresLeft(farm_tf_lvls.getText(), Integer.parseInt(farm_tf_basexp.getText()),
-						farm_rankmult);
-				farm_tp_result.setText(sts + "sts; " + sts * Integer.parseInt(farm_tf_cons_t.getText()) + "/"
-						+ sts * Integer.parseInt(farm_tf_cons_a.getText()) + " F/A");
+				
+			} else if (e.getSource() == farm_bt_setup) {
+				farm_frame_setup.setVisible(true);
 			} else if (e.getSource() == cc_bt_go) {
 				kanmusu = (Kanmusu) cc_cb_ship.getSelectedItem();
 				if (kanmusu.craft != "unbuildable") {
@@ -453,10 +452,11 @@ public class Ui {
 
 	public static void CCCi() {
 		ccc_frame.setLayout(new FlowLayout());
-		ccc_frame.setSize(300, 130);
+		ccc_frame.setSize(300, 100);
 		ccc_frame.setVisible(true);
 		ccc_frame.setResizable(false);
 		ccc_frame.setLocationRelativeTo(null);
+		ccc_frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		ccc_tp_.setEditable(false);
 		ccc_pb.setMinimum(0);
 		ccc_pb.setMaximum(2);
