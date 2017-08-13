@@ -70,7 +70,7 @@ public class KCDB {
 		try {
 			doc = Jsoup.connect("http://kancolle-db.net/ship/"+craft.replace('/', '-')+".html").get();
 		} catch (IOException e) {
-			Ui.err(e.getMessage()+"\n\nMaybe, you're trying to find unexisting craft?", "ERROR WITH COMMUNICATING KCDB");
+			Ui.err(e.getMessage()+"\nMaybe, you're trying to find unexisting craft?", "ERROR WITH COMMUNICATING KCDB");
 			return null;
 		}
 		Elements tr = doc.getElementsByTag("tr");
